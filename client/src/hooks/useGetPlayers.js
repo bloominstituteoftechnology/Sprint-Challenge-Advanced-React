@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-
-const getPlayers = () => {
+import axios from "axios";
+import { useEffect, useState } from "react";
+export function useGetPlayers = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,4 +16,4 @@ const getPlayers = () => {
   }, []);
 };
 
-export default getPlayers;
+export default useGetPlayers;
