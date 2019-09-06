@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-export function useGetPlayers = () => {
+
+const useGetPlayers = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -14,6 +15,7 @@ export function useGetPlayers = () => {
         console.log(error);
       });
   }, []);
+  return [data, setData];
 };
 
 export default useGetPlayers;
