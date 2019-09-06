@@ -1,7 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import Pagination from "./Pagination";
+// import Pagination from "./Pagination";
 import WorldCupCard from "./WorldCupCard";
 
 const MainCard = styled.div`
@@ -10,56 +10,44 @@ const MainCard = styled.div`
   margin: 10px auto;
 `;
 
-function WomanWorldCup() {
-  const [player, setPlayer] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = player.slice(indexOfFirstPost, indexOfLastPost);
-
-  // Change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
-
-  useEffect(() => {
+class WomanWorldCup extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      player: []
+    };
+  }
+  componentDidMount() {
+    this.fetchMyUser();
+  }
+  fetchMyUser = _ => {
     axios
       .get(`http://localhost:5000/api/players`)
-      .then(res => {
-        console.log("it's working:", res.data);
-        setPlayer(res.data);
-      })
-      .catch(error => {
-        console.log(error);
+      .then(res => this.setState({ player: res.data }))
+      .catch(err => {
+        console.log(err);
       });
-  }, []);
+  };
 
-  return (
-    <div className="App">
-      <Pagination
+  render() {
+    return (
+      <div className="App">
+        {/* <Pagination
         postsPerPage={postsPerPage}
         totalPosts={player.length}
         paginate={paginate}
-      />
-      <MainCard>
-        {currentPosts.map(data => {
-          return (
-            <WorldCupCard
-              key={data.id}
-              name={data.name}
-              country={data.country}
-              searches={data.searches}
-            />
-          );
-        })}
-      </MainCard>
-      <Pagination
+      /> */}
+        <MainCard>
+          <WorldCupCard player={this.state.player} />;
+        </MainCard>
+        {/* <Pagination
         postsPerPage={postsPerPage}
         totalPosts={player.length}
         paginate={paginate}
-      />
-    </div>
-  );
+      /> */}
+      </div>
+    );
+  }
 }
 
 export default WomanWorldCup;

@@ -18,16 +18,23 @@ const Header = styled.div`
 `;
 
 function WorldCupCard(props) {
+  console.log(props);
   return (
     <div>
-      <BodyCard>
-        <Header>
-          <h2>{props.name}</h2>
-        </Header>
-        <p>Country: {props.country}</p>
+      {props.player.map(player => {
+        return (
+          <div>
+            <BodyCard>
+              <Header>
+                <h2>{player.name}</h2>
+              </Header>
+              <p>Country: {player.country}</p>
 
-        <p>Search Ranking: {props.searches}</p>
-      </BodyCard>
+              <p>Search Ranking: {player.searches}</p>
+            </BodyCard>
+          </div>
+        );
+      })}
     </div>
   );
 }
