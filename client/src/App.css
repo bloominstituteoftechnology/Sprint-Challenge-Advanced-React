@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+.player-info {
+  border: 2px solid magenta;
+}
+.players-list {
+  border: 3px dashed purple;
+}
