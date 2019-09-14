@@ -12,6 +12,11 @@
   "devDependencies": {
     "nodemon": "^1.17.2"
   },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+  },
+
   "scripts": {
     "start": "nodemon server.js"
   },

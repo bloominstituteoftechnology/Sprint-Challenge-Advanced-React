@@ -1,40 +1,28 @@
-import React, {Component}from 'react';
-import { Card} from 'semantic-ui-react';
+import React, { useState, useEffect } from "react";
 import './App.css';
+import axios from 'axios';
 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      player: []
-    };
-  }
+  function App() {
+    const [player, setPlayer] = useState("");
+    useEffect(() => {
 
-  componentDidMount(){
-    fetch("http://localhost:5000/api/players")
-      .then(res => res.json())
-      //.then(res => console.log(res) )
-      .then(res => {
-        //debugger;
-        this.setState({player:res})})
-      .catch(err => console.log('Error', err))
-  }
+      axios
+        .get("http://localhost:5000/api/players")
+        .then(res => setPlayer(res.data.player))
+        .catch(err => console.log('Error', err));
+    }, []);
 
-  render(){
     return(
 
-    <div className='player'>
-    {this.state.player.map(banana => (
-    
-    <div className='card'>
-   
-      <h2>{banana.name}</h2>
-      <h3>{banana.country}</h3>
-  
+    <div>
+    {player.map(players => {
+  <div>
+      <h2>{players.name}</h2>
+      <h3>{players.country}</h3>
   </div>
-    ))}
+    })}
   </div>
-    )}}
+    )
 
-    export default App;
+export default App;
