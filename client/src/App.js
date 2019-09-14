@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Players from "./components/Players";
 
 class App extends React.Component {
 
@@ -24,6 +25,15 @@ class App extends React.Component {
       <header className="App-header">
       <h1>Sprint Challenge: Advanced React - Women's World Cup</h1>
       </header>
+      <div className="players-list">
+        <h2>Players List:</h2>
+        {this.state.playerData.map(player =>
+          <Players 
+          player={player}>
+          
+          </Players>
+          )}
+      </div>
     </div>
   );
   }
