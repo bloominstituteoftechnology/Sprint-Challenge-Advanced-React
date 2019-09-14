@@ -9,10 +9,12 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "nodemon": "^1.17.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest"
   },
   "author": "Lambda School",
   "license": "ISC"
