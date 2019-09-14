@@ -2,7 +2,11 @@
   text-align: center;
 }
 .player-info {
+  margin: 100px;
+  background: purple;
+  color: white;
   border: 2px solid magenta;
+  border-radius: 15px;
 }
 .players-list {
   border: 3px dashed purple;
