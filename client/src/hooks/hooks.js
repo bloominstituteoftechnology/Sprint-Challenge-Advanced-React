@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const useFetch = (url, innitialValue) => {
-  const [value, setValue] = useState(innitialValue);
+export const useInput = initialValue => {
+  const [value, setValue] = useState(initialValue);
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => console.error(err));
-  }, [url]);
-  return [value, url];
+  const handleChanges = e => {
+    setValue(e.target.value);
+  };
+
+  const clearField = () => {
+    setValue(initialValue);
+  };
+
+  return [value, handleChanges, clearField];
 };

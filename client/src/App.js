@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       {/* <Players /> */}
+      <p>Players</p>
       <FectchData />
     </div>
   );
