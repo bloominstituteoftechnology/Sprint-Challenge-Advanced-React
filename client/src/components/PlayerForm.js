@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useInput } from "../hooks/hooks";
 
 const PlayerForm = props => {
@@ -14,13 +14,21 @@ const PlayerForm = props => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor="player" hidden>
+        Player
+      </label>
       <input
+        data-testid="player"
         name="player"
         placeholder="Player"
         value={playerName}
         onChange={handleNameChanges}
       />
+      <label htmlFor="country" hidden>
+        Country
+      </label>
       <input
+        data-testid="country"
         name="country"
         placeholder="country"
         value={country}

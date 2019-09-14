@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 export const useInput = initialValue => {
   const [value, setValue] = useState(initialValue);
