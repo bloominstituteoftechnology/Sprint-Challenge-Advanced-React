@@ -1,33 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  border-bottom: 4px solid #91bad6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 2% 10px 1%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar h1 {
+  margin: 10px;
+}
+
+.dark-mode {
+  background-color: #001b3a;
+  color: #bcd2e8;
+}
+
+.dark-mode .navbar {
+  background-color: #2e5984;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark-mode .player-card {
+  background-color: #2e5984;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode .player-card:hover {
+  box-shadow: 0 0 10px white;
+}
+
+.players-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-card {
+  width: 250px;
+  border: 1px solid #91bad6;
+  padding: 15px 1%;
+  margin: 20px 2%;
+  border-radius: 3%;
+}
+
+.player-card:hover {
+  box-shadow: 0 0 5px #001b3a;
+}
+
+.player-card h3 {
+  width: 100%;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #91bad6;
+}
+
+button {
+  padding: 0 1%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: #001b3a;
+  color: #bcd2e8;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid #001b3a;
+  background-color: #bcd2e8;
+  color: #001b3a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
