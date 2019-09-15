@@ -7,3 +7,8 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+it('fetches data', () => {
+  const expected = data;
+  expect(data).toBeDefined();
+})

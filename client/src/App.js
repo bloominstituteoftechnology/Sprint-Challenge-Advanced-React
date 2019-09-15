@@ -16,8 +16,7 @@ class App extends Component {
   componentDidMount() {
     Axios.get(API)
      .then(res => {
-      console.log(res.data)
-      this.setState({players: res.data})
+    this.setState({players: res.data})
     })
   }
   render() {
