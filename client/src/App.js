@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 
-  function App() {
+  function App () {
     const [player, setPlayer] = useState("");
     useEffect(() => {
 
@@ -23,6 +23,6 @@ import axios from 'axios';
   </div>
     })}
   </div>
-    )
+    )}
 
 export default App;

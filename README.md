@@ -21,11 +21,30 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
+- Why would you use class component over function components (removing hooks from the question)?
+ There is more documentation and tutorials.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+ - Name three lifecycle methods and their purposes.
+
+mounting 
+This is the phase when the component is being built out from ground up.
+Whatever initial data you’ll have access to will be defined on the constructor of this phase
+Your render method is invoked.
+componentDidMount gets called as well.
+
+updating 
+setState can be used to change the component’s state data, forcing a call to render.
+shouldComponentUpdate is a method one could use here to stop a component from calling render if necessary.
+
+unmounting
+Component is removed from the screen.
+componentWillUnmount is called and can be used for any clean up you may need to do.
+
+- What is the purpose of a custom hook?
+Custom Hooks, so-called because you are building the hook yourself, allow you to apply non-visual behavior and stateful logic throughout your components by reusing the same hook over and over again. 
+
+ - Why is it important to test our apps?
+user eperince and edge cases. Gain confidence in code
 
 ## Project Set Up
 
