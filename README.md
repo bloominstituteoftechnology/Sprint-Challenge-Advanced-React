@@ -44,16 +44,16 @@ because they might not work and testing will enable you to discover that they do
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `yarn` to download dependencies.
-- [ ] Run the server using `yarn start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
-- [ ] Still inside the `client` folder run `yarn start` to run the client application.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add TL as collaborator on Github.
+- [X] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [X] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [X] Run `yarn` to download dependencies.
+- [X] Run the server using `yarn start` or `node server.js`.
+- [X] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
+- [X] Still inside the `client` folder run `yarn start` to run the client application.
+- [X] Implement the project on this Branch, **committing progress & changes often.**
+- [X] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
