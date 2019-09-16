@@ -10,7 +10,8 @@ const DisplayPlayers = (props) => {
                     <h1>{player.name}</h1>
                     <h2>Country: {player.country}</h2>
                     <h2># of Searches: {player.searches}</h2>
-                    <h2>ID# {player.id}</h2>
+                    <button>Like</button>
+                    <button>Hate</button>
                 </div>
             )}
         </div>
