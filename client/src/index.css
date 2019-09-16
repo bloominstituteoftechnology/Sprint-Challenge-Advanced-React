@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+    padding: 3em;
+    text-align: center;
+    color:white;
+    background-color: #ADD8E6;
+    margin: 0 auto;
+
 }
 
 code {
@@ -12,11 +19,57 @@ code {
     monospace;
 }
 
-.player {
+
+.title {
+    font-family: Archivo Black,sans-serif;
+    font-size: 3em;
+}
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.dark-mode__toggle {
+  background: grey;
+  border-radius: 50px;
+  border: 1px solid #000;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+    background: #000;
+    border-radius: 50px;
+    height: 18px;
+    left: 0;
+    position: absolute;
+    transition: .2s;
+    width: 20px;
+}
+
+.list {
+  padding: 5px;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
- 
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
+
+.card {
+  margin: 20px;
+  padding: 1em;
+  width: 300px;
+  background:#B22222;
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+
+
 

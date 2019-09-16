@@ -1,28 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
 import './App.css';
-import axios from 'axios';
+import './index.css';
 
 
-  function App () {
-    const [player, setPlayer] = useState("");
-    useEffect(() => {
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      players: []
+    };
+  }
 
-      axios
-        .get("http://localhost:5000/api/players")
-        .then(res => setPlayer(res.data.player))
-        .catch(err => console.log('Error', err));
-    }, []);
+  //useEffect does
+  componentDidMount(){
+    fetch("http://localhost:5000/api/players")
+      .then(res => res.json())
+      //.then(res => console.log(res) )
+      .then(res => {
+        //debugger;
+        this.setState({players:res})})
+      .catch(err => console.log('Error', err))
+  }
 
+  render() {
     return(
 
-    <div>
-    {player.map(players => {
-  <div>
-      <h2>{players.name}</h2>
-      <h3>{players.country}</h3>
-  </div>
-    })}
-  </div>
-    )}
+      <div className='app'>
+        <h1 class='title'>Women's World Cup</h1>
+        <h3>Created By: Kayla Dailey</h3>
+        <br></br>
+        <h3>Dark Mode:</h3> 
+        <nav className='navbar'>
+          <div className="dark-mode_toggle">
+          <div className='toggle'></div>
+          </div>
+        </nav>
+        {this.state.players.map(player => (
+       <div className ='list'>
+      <div className='card'>
+        <h1>{player.name}</h1>
+        <h2>{player.country}</h2>
+        <p>{player.id}</p>
+        </div>
+        </div>
+        ))}
+        </div>
+    );
+        }
+      }
 
 export default App;
