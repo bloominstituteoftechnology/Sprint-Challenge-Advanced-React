@@ -12,12 +12,13 @@
 
 .App-header {
   background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: antiquewhite;
+   background-image: url(sports.jpg);
+  background-size: cover;
+ background-repeat: no-repeat;
+  background-position: center;
+  height: 50%;
 }
 
 .App-link {
@@ -33,14 +34,15 @@
   }
 }
 
-body{
-
+body {
+  background-color: brown;
 }
 
 .playerBox {
   background-color: darkslategray;
   width: 60%;
   margin: 2%;
+  color: lightskyblue;
 }
 
 .playerBoxesContainer {
