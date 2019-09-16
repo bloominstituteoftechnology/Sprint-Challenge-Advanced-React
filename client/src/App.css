@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -10,7 +12,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,3 +32,22 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+
+}
+
+.playerBox {
+  background-color: darkslategray;
+  width: 60%;
+  margin: 2%;
+}
+
+.playerBoxesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
