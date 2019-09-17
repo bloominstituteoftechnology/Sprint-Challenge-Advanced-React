@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { isMainThread } from 'worker_threads';
+import NavBar from "./components/NavBar"
 
 
 
@@ -16,4 +16,11 @@ describe("Finding the product of two numbers", () => {
     expect(-5*2).toEqual(-10);
   })
 
+});
+
+describe("NavBar", () => {
+  it("NavBar renders without crashing", () => {
+    const div=document.createElement("div");
+    ReactDOM.render(<NavBar />,div);
+  })
 })
