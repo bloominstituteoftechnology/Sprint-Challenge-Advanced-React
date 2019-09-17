@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from 'axios';
 
 class Team extends Component {
   constructor() {
@@ -24,7 +23,7 @@ class Team extends Component {
     return(
 
       <div className='app'>
-        <h1 className='title'>Women's World Cup</h1>
+        
         <h3>Created By: Kayla Dailey</h3>
         <br></br>
         {this.state.players.map(player => (
