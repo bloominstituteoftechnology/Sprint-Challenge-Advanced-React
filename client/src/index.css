@@ -5,26 +5,73 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
+    padding: 3em;
+    text-align: center;
+    color:white;
+    background-color: lightgray;
+    margin: 0 auto;
+ }
+ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+ }
+ .title {
+    font-family: Archivo Black,sans-serif;
+    font-size: 3em;
+ }
+ .navbar {
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+ }
+ .dark-mode{
+  background: grey;
+  border-radius: 50px;
+ 
+  
+ }
+ .toggle {
+    background: #000;
+    border-radius: 50px;
+    align-items: center;
+    height: 18px;
+    left: 0;
+    transition: .2s;
+    width: 20px;
+ }
+ .btn{
+  background:white;
+  border-radius: 50px;
+  align-items: center;
+  height: 21px;
+  left: 0;
+  transition: .2s;
+  width: 25px;
+ }
+ .list {
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-wrap: row;
+ justify-content: space-around;
+ }
+ .card {
+  margin: 20px;
+  padding: 1em;
+  width: 300px;
+  background:gray;
+  border: 3px solid;
+  border-radius: 10px;
+ align-content: space-between;
+ }
+ 
 
-
-.app{
-  border:2px solid #fff;
-  border-radius:3px;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  align-content:center;
-  margin:20px;
-  padding:0px 10px;
-  font-weight:600;
-  font-size:1.2em;
-  line-height:1;
-  box-sizing:border-box;
-  height:40px
-}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
