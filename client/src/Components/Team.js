@@ -5,9 +5,7 @@ class Team extends Component {
     super();
     this.state = {
       players: []
-    };
-
-  }
+    };  }
   componentDidMount(){
     fetch("http://localhost:5000/api/players")
       .then(res => res.json())
@@ -16,34 +14,21 @@ class Team extends Component {
         //debugger;
         this.setState({players:res})})
       .catch(err => console.log('Error', err))
-  },
-
+  }
   render() {
     return(
-
       <div className='app'>
         <h1 className='title'>Women's World Cup</h1>
         <h3>Created By: Kayla Dailey</h3>
-        <br></br>
         {this.state.players.map(player => (
-
-       <div className ='list'>
+       <div key={player.id} className ='list'>
        <div className='card'>
-        <h1>{player.name}</h1>
+        <h1>{player.name} </h1>
         <h2>{player.country}</h2>
         <p>{player.searches}</p>
-
         </div>
         </div>
-
         ))}
         </div>
-    )
-        }
-      }
-
+     )}}
 export default Team;
-
-  
-
-  
