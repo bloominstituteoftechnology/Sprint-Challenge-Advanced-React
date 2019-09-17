@@ -29,6 +29,7 @@ p {
 .player-card {
   border: 1px solid black;
   width: 300px;
+  margin: 16px;
 }
 
 .player-card h2 {
