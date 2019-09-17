@@ -26,7 +26,7 @@
 
 - [ ] What is the purpose of a custom hook?
     
-        A custom hook is used to extend multiple pieces of staeful logic.
+        A custom hook is used to extend multiple pieces of stateful logic.
 
 ------------------------------------------------------------------------------------------------
 
