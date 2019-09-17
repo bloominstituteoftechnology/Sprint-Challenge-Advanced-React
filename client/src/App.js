@@ -1,52 +1,37 @@
-import React, { Component } from "react";
+import React, {useState} from "react";
+import ReactDOM from 'react-dom';
+import Team from './Components/Team';
 import './App.css';
 import './index.css';
+import {ThemeProvider, createGlobalStyle} from 'styled-components';
 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      players: []
-    };
-  }
 
-  //useEffect does
-  componentDidMount(){
-    fetch("http://localhost:5000/api/players")
-      .then(res => res.json())
-      //.then(res => console.log(res) )
-      .then(res => {
-        //debugger;
-        this.setState({players:res})})
-      .catch(err => console.log('Error', err))
-  }
+const GlobalStyle = createGlobalStyle`
+body {
+  background-color: ${props => props.theme.mode === 'dark' ? '#111' : '#ADD8E6'};
+  color: ${props => props.theme.mode === 'dark' ? '#00000' : '#00000'};
+}`;
 
-  render() {
-    return(
 
-      <div className='app'>
-        <h1 class='title'>Women's World Cup</h1>
-        <h3>Created By: Kayla Dailey</h3>
-        <br></br>
-        <h3>Dark Mode:</h3> 
-        <nav className='navbar'>
-          <div className="dark-mode_toggle">
-          <div className='toggle'></div>
-          </div>
-        </nav>
-        {this.state.players.map(player => (
-       <div className ='list'>
-      <div className='card'>
-        <h1>{player.name}</h1>
-        <h2>{player.country}</h2>
-        <p>{player.id}</p>
-        </div>
-        </div>
-        ))}
-        </div>
-    );
-        }
-      }
+const App = () => {
+const [theme, setTheme] = useState({mode: 'light'});
+
+  return (
+    < ThemeProvider theme={theme}> 
+      <React.Fragment>
+    {/* ^^Resolves the error 'React.Children.only expected to receive a single React element child' */}
+    <GlobalStyle />
+    <div className='App'>
+      <button className='button' onClick = { e =>setTheme(theme.mode === 'dark'
+        ? { mode: 'light' }
+        : { mode: 'dark' })}>
+        Dark Mode
+      </button>
+      < Team />
+    </div>
+    </React.Fragment>
+    </ThemeProvider>
+  )}
 
 export default App;

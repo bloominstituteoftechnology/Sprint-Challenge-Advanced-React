@@ -7,18 +7,22 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
     "express": "^4.15.2",
-    "semantic-ui-react": "^0.88.1"
+    "local-storage-fallback": "^4.1.1",
+    "semantic-ui-react": "^0.88.1",
+    "styled-components": "^4.3.2",
+    "styled-theming": "^2.2.0"
   },
   "devDependencies": {
+    "jest": "^24.9.0",
     "nodemon": "^1.17.2"
   },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module"
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
-
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest --watchAll"
   },
   "author": "Lambda School",
   "license": "ISC"
