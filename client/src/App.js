@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './App.css';
 import './index.css';
 import Nav from './Components/Nav';
@@ -13,6 +13,9 @@ function App() {
   return (
 
     <div className="App">
+    <div>
+   <h3> Help  </h3>
+    </div>
       <Nav />  
       <Team /> 
     </div>

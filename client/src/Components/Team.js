@@ -22,8 +22,7 @@ class Team extends Component {
    return(
      <div className='app'>
        <h1 className='title'>Women's World Cup</h1>
-       <h3>Created By: Nick Dailey</h3>
-       <br></br>  
+       <h3>Created By: Nick Dailey</h3> 
     {this.state.players.map(player => (
       <div className ='list'>
      <div className='card'>
