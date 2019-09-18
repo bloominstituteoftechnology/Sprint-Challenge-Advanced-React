@@ -13,7 +13,7 @@ const Nav = () => {
    <>
    <nav className='navbar'>
      <div className='dark-mode__toggle'>
-         <h1>Women's World Cup!</h1>
+         <h1 className='title'>Women's World Cup!</h1>
 <h3> Dark Mode: </h3>
        <button className= 'btn'>
        <div

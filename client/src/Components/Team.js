@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 class Team extends Component {
   constructor() {
     super();
@@ -18,7 +19,6 @@ class Team extends Component {
   render() {
     return(
       <div className='app'>
-        <h1 className='title'>Women's World Cup</h1>
         <h3>Created By: Kayla Dailey</h3>
         {this.state.players.map(player => (
        <div key={player.id} className ='list'>
