@@ -1,19 +1,19 @@
 import React from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 
 import PlayerData from './Components/PlayerData';
-import PlayerCard from './Components/PlayerCard';
+import Nav from './Components/Nav';
+
+import '../src/App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: {}
-    };
-  }
+  state = {
+    data: [],
+    images: []
+  };
 
     componentDidMount() {
-      axios
+      Axios
         .get('http://localhost:5000/api/players')
         .then(response => {
           this.setState({ data: response.data });
@@ -26,9 +26,10 @@ class App extends React.Component {
 
     render() {
       return (
-        <section className='app'>
+        <section className='player-app'>
           <h1>Women's World Cup Players</h1>
-          <PlayerCard players={this.state.data} />
+          <Nav />
+          <PlayerData players={this.state.data} images={this.state.images} />
         </section>
       );
     }

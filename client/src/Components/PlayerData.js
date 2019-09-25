@@ -1,13 +1,18 @@
-import react from 'react';
+import React from 'react';
 
 import PlayerCard from './PlayerCard';
 
-const PlayerData = props => {
+const PlayerData = ({ players, images }) => {
     return (
-        <section className='player-data'>
-            {props.data.map(info => {
-                return <PlayerCard data={info} key={data.id} />
-            })}
+        <section>
+            {players.map(player => (
+                <PlayerCard 
+                    key={player.id}
+                    name={player.name}
+                    country={player.country}
+                    searches={player.searches}
+                />
+            ))}
         </section>
     );
 };
