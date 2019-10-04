@@ -1,23 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import './App.css';
+
+import axios from 'axios';
+
+import PlayerList from './components/PlayerList.js';
+import Navbar from './components/NavBar.js';
+
+function App() {
+  const [players, setPlayers] = useState([])
 
 
-class App extends React.Component {
-  constructor(){
-    super();
-    this.state
-  }
 
+  useEffect(() => {
+    axios
+    .get('http://localhost:5000/api/players')
+    .then(res => {
+      console.log(res.data)
+      setPlayers(res.data);
+    })
+    .catch(error => {
+      console.log('Server Error', error)
+    })
 
-componentDidMount(){};
+  }, [])
 
-componentDidUpdate(){};
-
-render(){
-  return(
-    <div className='App'>
-      Hardcoded from App
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Navbar />
+        <h1>Women's World Cup</h1>
+      <PlayerList players={players} />
+      </header>
     </div>
   );
 }
-  }
 export default App;
