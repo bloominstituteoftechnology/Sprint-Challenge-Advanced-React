@@ -1,4 +1,5 @@
 import React from 'react';
+import Players from './Players';
 
 class App extends React.Component {
   constructor() {
@@ -7,7 +8,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>Hi molly!</h1>
+      <Players />
     )
   }
 }
