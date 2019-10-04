@@ -2,6 +2,7 @@ import React from 'react'
 import PlayersCard from './PlayersCard'
 
 //deconstruting, grab props from
+//send to players card
 const PlayersList = props => {
     console.log(`PlayersList props`,props)
     //destructure

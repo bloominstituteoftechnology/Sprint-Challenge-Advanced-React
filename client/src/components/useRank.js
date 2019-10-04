@@ -1,7 +1,7 @@
 //import {useState} from 'react'
 import { useLocalStorage } from './useLocalStorage';
 
-
+//used for Brazil and Germany
 // parameters key, initialValue
 export const useRank = (key, initialValue) =>{
     const[value, setValue] = useLocalStorage(key, initialValue)
