@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import EmailInput from './components/EmailInput';
 
 class App extends React.Component {
   state = {
@@ -22,6 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h3>Below is Data recieved from googletrends</h3>
+        <EmailInput />
         {this.state.me ? <p>{this.state.me}</p> : <p>loading...</p>}
       </div>
     
