@@ -8,8 +8,8 @@ class Cards extends Component {
     render() { 
         console.log(this.props.data)
         return (    
-            this.props.data.map(player => (
-                <Card player={player} />
+            this.props.data.map((player, index) => (
+                <Card player={player} id={index}/>
              ))
         );
     }

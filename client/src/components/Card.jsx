@@ -6,7 +6,7 @@ class Card extends Component {
     }
     render() { 
         return (
-            <div>
+            <div data-testid={this.props.index} >
             <h3>{this.props.player.name}</h3>
             <h3>{this.props.player.searches}</h3>
           </div>
