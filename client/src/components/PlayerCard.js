@@ -8,9 +8,9 @@ const PlayerCard = ({ name, country, searches }) => {
         <div>
             <Card>
                 <CardBody>
-                    <CardText>Player Name: {name}</CardText>
-                    <CardText>Country: {country}</CardText>
-                    <CardText>Player Searches: {searches}</CardText>
+                    <CardText data-testid="name">Player Name: {name}</CardText>
+                    <CardText data-testid="country">Country: {country}</CardText>
+                    <CardText data-testid="searches">Player Searches: {searches}</CardText>
 
 
                 </CardBody>
