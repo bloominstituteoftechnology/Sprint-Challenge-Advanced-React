@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+  state = {
+    me: null,
+  };
 
+  componentDidMount() {
+    axios.get(`https://raw.githubusercontent.com/googletrends/data/master/20190815_WomensWorldCup.csv`)
+    .then(res => {
+      console.log(res)
+      this.setState({
+        me : res.data
+      })
+    })
+  }
+
+
+  render() {
+    return (
+      <div className="App">
+        <h3>Below is Data recieved from googletrends</h3>
+        {this.state.me ? <p>{this.state.me}</p> : <p>loading...</p>}
+      </div>
+    
+    )}
+}
 export default App;
