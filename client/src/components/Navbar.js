@@ -19,8 +19,10 @@ const Navbar = () => {
   };
 
   const [voteUSA, setVoteUSA] = useRank('voteUsa', 0);
-  const [voteBrazil, setVoteBr, voteClickBr] = useRank();
-  const [voteGermany, setVoteGmy, voteClickGmy] = useRank();
+
+  // using custom hooks from useRank
+  const [voteBrazil, setVoteBr, voteClickBr] = useRank('br', 0);
+  const [voteGermany, setVoteGmy, voteClickGmy] = useRank('ger', 0);
   
 
   return (
