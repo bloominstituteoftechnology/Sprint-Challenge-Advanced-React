@@ -6,9 +6,10 @@ const useEmail = () => {
   const onChange = event => {
     let valid = false;
     let input = event.target.value;
-    if (input.length > 0) {
+    if (input.includes("@")) {
       valid = true;
-    }
+    } else 
+      valid = false
     setIsEmail(valid);
   };
 
