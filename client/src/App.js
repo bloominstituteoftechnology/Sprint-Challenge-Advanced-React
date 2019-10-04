@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Wwc from './components/Wwc'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <Navbar/>
+      <Wwc/>
     </div>
   );
 }
