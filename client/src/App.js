@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import axios from "axios";
-
+import Navbar from "./components/navbar"
+import "./styles.scss";
 
 class App extends React.Component {
  constructor(){
@@ -25,6 +26,7 @@ class App extends React.Component {
  render(){
    return (
      <div className="App">
+       <Navbar />
        <div className="follower">
          {this.state.country.map(follower => (
            <div key={follower.id}>
