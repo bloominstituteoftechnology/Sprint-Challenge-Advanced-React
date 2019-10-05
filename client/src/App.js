@@ -36,12 +36,15 @@ class App extends React.Component {
 
   render() {
     return (
+      <div className="App">
 
-      <div data-testid="tennis-players" className="tennis-players">
-        <Navbar />
-        <CardList tennisData={this.state.tennisData} />
+
+        <div data-testid="tennis-players" className="tennis-players">
+          <Navbar />
+          <CardList tennisData={this.state.tennisData} />
+        </div>
+
       </div>
-
     )
   }
 }
