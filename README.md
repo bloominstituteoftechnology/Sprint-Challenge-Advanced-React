@@ -10,7 +10,7 @@ The data you will get back from the server will be the Women's World Cup players
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your PM and Instructor in your cohort help channel on Slack. Your work reflects your proficiency with ReactJS Fundamentals and your command of the concepts and techniques in the Functional Components.
+You are not allowed to collaborate during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL and Instructor in your cohort help channel on Slack. Your work reflects your proficiency with ReactJS Fundamentals and your command of the concepts and techniques in the Functional Components.
 
 You have three hours to complete this challenge. Plan your time accordingly.
 
@@ -20,7 +20,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 ## Self-Study/Essay Questions
 
-Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
+Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
 - [ ] Name three lifecycle methods and their purposes.
@@ -45,8 +45,8 @@ Follow these steps to set up and work on your project:
 Follow these steps for completing your project:
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by merging the branch back into master.
+- [ ] Add your Team Lead as a Reviewer on the Pull-request.
+- [ ] TL then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
