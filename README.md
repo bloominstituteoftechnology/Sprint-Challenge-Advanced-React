@@ -55,7 +55,7 @@ Your finished project must include all of the following requirements:
 - [ ] Class component that fetches data from the server you now have running - the data can be fetched from `http://localhost:5000/api/players`
 - [ ] Display the player data you receive from the API
 - [ ] Build a custom hook and use it in your app - this can be a localStorage hook, a fetch hook, a dark mode hook, or any other hook you would like
-- [ ] Write integration tests for your React components
+- [ ] Write a "reasonable" amount of unit tests for your React components. What does "reasonable amount" mean? That is up to you to decide. Be ready to defend your choice to your TL 👍
 
 ## Stretch Problems
 
