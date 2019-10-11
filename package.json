@@ -9,6 +9,7 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.3.0",
     "nodemon": "^1.17.2"
   },
   "scripts": {
