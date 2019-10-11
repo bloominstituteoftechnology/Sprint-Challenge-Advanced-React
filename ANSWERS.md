@@ -1,4 +1,4 @@
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [it's more widely used ] Why would you use class component over function components (removing hooks from the question)?
+- [  ] Name three lifecycle methods and their purposes.
+- [to use over and over ] What is the purpose of a custom hook?
+- [ you don't want to write a bunch of code that breaks only to try to fix it after the fact or find out exactly where it is without the tests] Why is it important to test our apps?
