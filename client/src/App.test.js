@@ -1,9 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {render} from '@testing-library/react';
+
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+it('App renders without crashing', () => {
+ 
+  render(<App />)
+});
+
+
+// test(' Darkmode?', () => {
+//   const { getByTextId } = render(<App />);
+//   getByTextId(/darkmode/i);
+// });
+
+test(' App header contains text', () => {
+  const navbar = render(<App />)
+  // const { getByText } = render(<App />);
+  navbar.getByText(/World Cup/i);
 });
