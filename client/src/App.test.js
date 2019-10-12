@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as rtl from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+afterEach(rtl.cleanup);
+
+test('Dark Mode Button exists', () => {
+  const wrapper = rtl.render(<App />)
+  wrapper.debug(wrapper.queryByText('Dark Mode'));
+})
+
+
+test('Dark Mode Button has onClick of "toggle" ', () => {
+  const wrapper = rtl.render(<App />);
+  const element = wrapper.queryByText('Dark Mode');
+  expect(element).toHaveAttribute('onClick', 'toggleMode');
+})
