@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
-function Players(key, initialValue) {
+function Players(props) {
+    console.log(props)
     const [someValue, setSomeValue] = useLocalStorage('key', false);
 
     useEffect(() => {
@@ -14,7 +15,13 @@ function Players(key, initialValue) {
 
     }, [someValue])
 
-    return [someValue, setSomeValue]
+    return (
+        <div>
+            <h3>{props.player.name}</h3>
+            <h4>{props.player.country}</h4> 
+            <h5>{props.player.searches}</h5>
+        </div>
+    )
 }
 
 export default Players;

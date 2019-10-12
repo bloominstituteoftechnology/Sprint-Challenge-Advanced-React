@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
-import Players from '../src/components/Players';
-// import data from '../src/components/data';
-// import api from '../src/components/api';
+import Players from './components/Players';
+import { usePlayers } from './components/api';
 
 
 import './App.css';
@@ -10,7 +9,8 @@ import './App.css';
 function App(props) {
   const[player, setPlayer] = useLocalStorage('player', 'country');
   const[search, setSearch] = useLocalStorage('search', 1);
-  const [players] = useState(['name', 'country', 'searches']);
+  const [players, setPlayers] = usePlayers();
+  
 
   return (
     <>

@@ -9,6 +9,7 @@ afterEach(rtl.cleanup);
 test('Render the app', () => {
   const wrapper = rtl.render(<App />)
   const element = wrapper.getByText(/women's world cup/i)
+  wrapper.debug(wrapper.queryByText(/united states/i))
   expect(element).toBeVisible()
 })
 
@@ -17,7 +18,6 @@ test('Render count input', () => {
   const element = wrapper.getByPlaceHolderText(/count/i)
   expect(element).toHaveValue(1)
 })
-
 
 
 it('renders without crashing', () => {
