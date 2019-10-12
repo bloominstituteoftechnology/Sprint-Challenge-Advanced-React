@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export function usePlayers(player, country, search-interest){
-    const [players, setPlayers] useState([]);
+    const [players, setPlayers] = useState([]);
 
     useEffect(() => {
         setPlayers([])
