@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export function usePlayers(player, country, search-interest){
+export function usePlayers(name, country, searches){
     const [players, setPlayers] = useState([]);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export function usePlayers(player, country, search-interest){
         .catch(error => {
             console.log('error', error)
         })
-    }, [player, country, search-interest])
+    }, [name, country, searches])
 
     return [players, setPlayers]
 }

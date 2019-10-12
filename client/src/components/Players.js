@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
-export function useDarkMode(key, initialValue) {
+function Players(key, initialValue) {
     const [someValue, setSomeValue] = useLocalStorage('key', false);
 
     useEffect(() => {
@@ -16,3 +16,5 @@ export function useDarkMode(key, initialValue) {
 
     return [someValue, setSomeValue]
 }
+
+export default Players;

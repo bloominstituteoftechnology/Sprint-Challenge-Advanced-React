@@ -1,5 +1,8 @@
-import React from 'react';
-import { useLocalStorage } from './hooks/localStorage';
+import React, { useState } from 'react';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import Players from '../src/components/Players';
+import data from '../src/components/data';
+import api from '../src/components/api';
 
 
 // import './App.css';
@@ -7,7 +10,7 @@ import { useLocalStorage } from './hooks/localStorage';
 function App(props) {
   const[player, setPlayer] = useLocalStorage('player', 'country');
   const[search, setSearch] = useLocalStorage('search', 1);
-  // const [players] = useState([]);
+  const [players] = useState([]);
 
   return (
     <>
@@ -18,11 +21,12 @@ function App(props) {
       <input
       type='number' placeholder='Search Count' value={search} onChange={e => setSearch(e.target.value)} />
 
-      {/* <div>
+      <div>
         {players.map((player, index) => (
-          <
+          <Players player={player} key={index} />
         ))}
-      </div> */}
+      </div>
+      </>
   );
 }
 
