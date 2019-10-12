@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
 import './App.css';
+import Display from './Display';
+import Navbar from './Navbar';
 
 function App() {
-  const [player, setPlayer] =setState([]);
+  const [players, setPlayers] =useState([]);
 
 useEffect(() => {
   axios
       .get('http://localhost:5000/api/players')
-      .then(res => {
-        console.log(res.data)
-        .catch(err => {
-          console.log(err.response)
-        })
-      })
+      .then(res => setPlayers(res.data))
+      .catch(err => console.log(err));
+  
 
 }, [])
 
   return (
-    <div className="App">
-    <h1>HI</h1>
+    <div className='App'>
+      <Navbar />
+    {players.map(player => (
+      <Display name={player.name} country={player.country} searches={player.searches} id={player.id} />
+    ))}
     </div>
   );
 }
