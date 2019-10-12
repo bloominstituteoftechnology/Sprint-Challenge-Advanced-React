@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import Players from '../src/components/Players';
-import data from '../src/components/data';
-import api from '../src/components/api';
+// import data from '../src/components/data';
+// import api from '../src/components/api';
 
 
-// import './App.css';
+import './App.css';
 
 function App(props) {
   const[player, setPlayer] = useLocalStorage('player', 'country');
   const[search, setSearch] = useLocalStorage('search', 1);
-  const [players] = useState([]);
+  const [players] = useState(['name', 'country', 'searches']);
 
   return (
     <>
       <h1>Women's World Cup - 2019 </h1>
+
       <select value={player} onChange={e => setPlayer(e.target.value)}> 
+        <option value="name">Name</option>
+        <option value="country">Country</option>
+        <option value="searches">Amount of Searches</option>
       </select>
 
       <input

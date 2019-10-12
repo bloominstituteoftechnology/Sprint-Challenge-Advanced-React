@@ -8,15 +8,17 @@ afterEach(rtl.cleanup);
 
 test('Render the app', () => {
   const wrapper = rtl.render(<App />)
-
   const element = wrapper.getByText(/women's world cup/i)
   expect(element).toBeVisible()
 })
 
-test('Render count imput', () => {
+test('Render count input', () => {
   const wrapper =  rtl.render(<App />)
-  const element = wrapper.getByPlaceHolderText(/count)
+  const element = wrapper.getByPlaceHolderText(/count/i)
+  expect(element).toHaveValue(1)
 })
+
+
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

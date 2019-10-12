@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocalStorage } from './useLocalStorage';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 function Players(key, initialValue) {
     const [someValue, setSomeValue] = useLocalStorage('key', false);
