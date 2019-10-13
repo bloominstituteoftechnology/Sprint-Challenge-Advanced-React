@@ -17,3 +17,8 @@ it('loads dark mode button', () => {
   const element = app.getByTitle('dark-mode-btn');
   expect(element).toBeVisible();
 });
+
+it('renders players', () => {
+  const wrapper = ReactDOM.render(<App />);
+  const players = app.getByTestId(/player/i);
+})
