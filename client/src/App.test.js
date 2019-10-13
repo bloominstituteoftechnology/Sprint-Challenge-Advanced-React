@@ -21,4 +21,5 @@ it('loads dark mode button', () => {
 it('renders players', () => {
   const wrapper = ReactDOM.render(<App />);
   const players = app.getByTestId(/player/i);
+  expect(players).toBeVisible();
 })

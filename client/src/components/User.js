@@ -9,7 +9,7 @@ const UserCard = styled.div `
 
 function User(props) {
     return (
-        <UserCard>
+        <UserCard testId='player'>
             <h1>{props.name}</h1>
             <h2>{props.country}</h2>
         </UserCard>
