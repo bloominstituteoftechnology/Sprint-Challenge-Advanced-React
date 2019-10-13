@@ -2,32 +2,44 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.players {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  background: white;
+  box-shadow: 4px 4px 10px #aaa;
+  color: black;
+  margin-top:25px;
+  margin-bottom: 25px;
+  padding: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode {
+  background-color: #1a1919;
+  color: #444;
+  transition: background-color 0.4s ease;
+}
+
+button {
+  background: #444;
+  color: lightyellow;
+  border-radius: 4px;
+}
+
+
+.ui.cards {
+  box-shadow: 4px 4px 10px #aaa;
+  border-radius: 4px;
+}
+
+.ui.item {
+  background: whitesmoke;
+  color: black;
 }
