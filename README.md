@@ -23,9 +23,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+The reason (excluding hooks), would be so that you can base constructor life-cycle component, and create dynamic behaviour using state, this.setState for example allows for dynamic stateful behaviour/change, a crucial aspect of React.
+
 - [ ] Name three lifecycle methods and their purposes.
+Birth: component is created-create, Grow: Component Did Mount/& Render-growth: component is updated via state and rendering that state, Death: unmounting said component.
 - [ ] What is the purpose of a custom hook?
+By building out a custom hook, we can skip writing out all of the stateful logic for our non-visual behavior. It's reusable and DRY. A custom hook is also a way of of using state and effect in a useFunctionX component, it allows for functional pure components free of class constructors.
+
 - [ ] Why is it important to test our apps?
+The same reason integration and unit/other testing is important as a couple examples are to prevent large scale failures in an application later, it is the same reason an engineer would test a car before selling it to anyone. It minimizes risk.
 
 ## Project Set Up
 
