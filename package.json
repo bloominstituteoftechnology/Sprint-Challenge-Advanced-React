@@ -1,19 +1,44 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.3",
-    "express": "^4.15.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.2"
+    "@nivo/bump": "^0.59.1",
+    "@testing-library/jest-dom": "^4.1.2",
+    "nivo": "^0.31.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1",
+    "react-uuid": "^1.0.2",
+    "react-vis": "^1.11.7",
+    "semantic-ui": "^2.4.2",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1",
+    "shortid": "^2.2.15",
+    "uuid": "^3.3.3"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "author": "Lambda School",
-  "license": "ISC"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.3.0"
+  }
 }
