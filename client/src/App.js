@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
-import Headings from './components/Headings';
-import Body from './components/Body';
+import PlayerList from './components/PlayerList';
 import './App.css';
 
 class App extends Component {
@@ -28,13 +27,18 @@ class App extends Component {
 
   render() {
     return (
-    <div className="App">
+    <AppContainer>
       <Navbar />
-      <Headings />
-      <Body data = {this.state.data }/>
-    </div>
+      <PlayerList data = {this.state.data }/>
+    </AppContainer>
   );
 }
 }
 
 export default App;
+
+const AppContainer = styled.div`
+width: 50%;
+margin: 0 auto;
+border-radius: 5px;
+`

@@ -26,7 +26,7 @@ export class Navbar extends Component {
 }
 
 const Navigation = styled.nav`
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     background-color:red;
     box-shadow: 1px 1px 5px;

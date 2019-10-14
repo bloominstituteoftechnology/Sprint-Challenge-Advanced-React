@@ -1,15 +1,14 @@
 import React from 'react'
+import Data from './Data'
 
 function Body({ data }) {
     return (
+        
     <tbody>
         {data.map(playerStats => {
-            return <div><tr>
-            <td>{playerStats.name}</td>
-            <td>{playerStats.country}</td>
-            <td>{playerStats.searches}</td>
-        </tr></div>
-        })}
+            return <Data playerStats = { playerStats} key = {playerStats.name}
+            />
+        })} 
     </tbody>
     )
     }
