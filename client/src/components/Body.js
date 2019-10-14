@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Body({ playerData}) {
-    return
+function Body({ data }) {
+    return (
     <tbody>
-        {playerData.map(playerStats => {
+        {data.map(playerStats => {
             return <div><tr>
             <td>{playerStats.name}</td>
             <td>{playerStats.country}</td>
@@ -11,6 +11,7 @@ function Body({ playerData}) {
         </tr></div>
         })}
     </tbody>
-}
+    )
+    }
 
-export defaults Body
+export default Body
