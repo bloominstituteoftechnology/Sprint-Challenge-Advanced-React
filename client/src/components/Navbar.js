@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
+import Toggle from './Toggle'
 
 export class Navbar extends Component {
     static defaultProps = {
         title: 'Player Stats',
         icon: 'fas fa-baseball-ball'
     }
+    
 
     static propTypes= {
         title: PropTypes.string.isRequired,
@@ -19,7 +21,7 @@ export class Navbar extends Component {
                 <h1>
                     <i className={this.props.icon} /> {this.props.title}
                 </h1>
-
+                <Toggle />
             </Navigation>
         )
     }
