@@ -15,3 +15,5 @@ Unmount - Death of the component - componentWillUnmount()
 To apply reusable non-visual behavior and stateful logic
 
 - [ ] Why is it important to test our apps?
+
+It minimizes the risk of bugs in the produccion code
