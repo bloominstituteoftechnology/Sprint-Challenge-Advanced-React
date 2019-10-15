@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
-export let dataCount = 101;
+let dataCount = 0;
 
 class App extends React.Component {
   constructor() {
@@ -18,9 +18,7 @@ class App extends React.Component {
         this.setState({
           data: res.data
         })
-        console.log(this.state.data.length);
         dataCount = this.state.data.length;
-        console.log(dataCount)
       })
       .catch(err => console.log(err))
   }
