@@ -20,7 +20,7 @@ useEffect(() => {
     <div className='App'>
       <Navbar />
     {players.map(player => (
-      <Display name={player.name} country={player.country} searches={player.searches} id={player.id} />
+      <Display name={player.name} country={player.country} searches={player.searches} id={player.id} key={player.id} />
     ))}
     </div>
   );

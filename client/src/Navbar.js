@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useDarkMode from './hooks/useDarkMode';
 
 const Navbar = () => {
@@ -9,12 +9,12 @@ const Navbar = () => {
 		setDarkMode(!darkMode);
 	};
 	return (
-		<div className="navbar">
+		<nav className="navbar">
 			<h1>Welcome To The Greatest Players On Earth</h1>
-			<button onClick={toggleMode} className={darkMode ? 'toggle toggled': 'toggle'}>
-				HI
-			</button>
-		</div>
+			<div className="dark-mode__toggle">
+				<div onClick={toggleMode} className={darkMode ? 'toggle toggled' : 'toggle'} />
+			</div>
+		</nav>
 	);
 };
 
