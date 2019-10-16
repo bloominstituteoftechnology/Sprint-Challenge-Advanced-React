@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import fetchDataHook from './fetchDataHook'
+import NavBar from './navbar'
 
 let dataCount = 0;
 
@@ -26,11 +28,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <NavBar />  
         <h1>Women's World Cup Data</h1>
         {this.state.data.map(item => <div>Name: {item.name} Country: {item.country} Searches: {item.searches}</div>)}
       </div>
     )
   }
 }
-
+  
 export default App;

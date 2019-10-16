@@ -1,14 +1,15 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-export const fetchDataHook = (APIendpoint) => {
-    let data = [];
-    axios.get(`${APIendpoint}`)
-    .then(res => {
-        data = res.data
-    })
-    .catch(err => console.log(err))
+// export const fetchDataHook = () => {
+//     let data = [];
+//     axios.get('http://localhost:5000/api/players')
+//     .then(res => {
+//       this.setState({
+//         data: res.data
+//       })
+//       dataCount = this.state.data.length;
+//     })
+//     .catch(err => console.log(err))
+//     return data;
+//     }
 
-    return data;
-}
-
-// this custom hook is not used at this time but can be used in the future to fetch data from an external API
