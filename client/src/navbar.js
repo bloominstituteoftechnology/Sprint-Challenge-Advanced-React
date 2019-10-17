@@ -3,17 +3,13 @@ import { DarkMode } from './darkModeHook';
 
 const Nav = () => {
     const [darkMode, setDarkMode] = DarkMode(false)
-
     const handleChange = () => {
         setDarkMode(!darkMode)
     }
     return (
-        <div role="nav">
-          <input type='checkbox'
-            checked={darkMode} onChange={handleChange} aria-label="DarkMode Switch"/>}
-            label={darkMode ? 'Light Mode' : 'Dark Mode'}
-          />
-      </div>
+        <div>
+          Dark Mode: <input label='Dark Mode' type='checkbox' role='nav' onChange={handleChange}/>
+        </div>
     )
 }
 
