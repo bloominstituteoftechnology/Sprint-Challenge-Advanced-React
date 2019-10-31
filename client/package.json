@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --no-watchman --verbose",
+    "test": "jest --no-watchman",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
