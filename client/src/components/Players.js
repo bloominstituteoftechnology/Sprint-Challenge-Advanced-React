@@ -1,26 +1,38 @@
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import PLayerCard from './PlayerCard'
 
 class Players extends React.Component{
     constructor(){
 
        super();
     this.state = {
-        player: [],
+        players: [],
     } 
 }
 
     componentDidMount(){
-        axios.get(' https://googletrends.github.io/data/')
+        axios.get('http://localhost:5000/api/players')
         .then(res => {
-            console.log(res)
+              console.log(res.data)
+             this.setState({
+                 players: res.data
+             })
+
         })
         .catch(err => console.log(err));
+
+
     }    
 
     render(){
         return(
-            <div>Test</div>
+            <div>
+                {this.state.players.map(player => (
+                    
+                    <PLayerCard name ={player.name} id ={player.id}  country = {player.country} searches= {player.searches}  />
+                ))}
+            </div>
         )
     }
 
