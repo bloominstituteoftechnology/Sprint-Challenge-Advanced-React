@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 
 function DisplayData(props) {
-  const { info } = props;
+  const { data } = props;
   useEffect(() => {
-    console.log(info);
-  }, [info]);
+    console.log(data);
+  }, [data]);
 
   return (
     <div className="card-container">
-      {props.info.map(info => (
-        <div key={info.id} className="person-card">
-          <h1>Name: {info.name}</h1>
-          <p>Country: {info.country}</p>
-          <p>Searches: {info.searches}</p>
+      {props.data.map(data => (
+        <div key={data.id} className="person-card">
+          <h1>Name: {data.name}</h1>
+          <p>Country: {data.country}</p>
+          <p>Searches: {data.searches}</p>
         </div>
       ))}
     </div>

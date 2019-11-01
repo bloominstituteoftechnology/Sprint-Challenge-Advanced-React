@@ -14,7 +14,7 @@ class App extends React.Component {
     .get(`http://localhost:5000/api/players`)
     .then(res => {
       this.setState({
-        APICall: res
+        APICall: res.data
       });
       console.log("API data", this.state.APICall)
     })
@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Welcome to my Sprint Challenge App!</h1>
-        <DisplayData info={this.state.APICall}/>
+        <DisplayData data={this.state.APICall}/>
       </div>
     );
   }
