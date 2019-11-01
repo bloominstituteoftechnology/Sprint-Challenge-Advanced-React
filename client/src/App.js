@@ -4,7 +4,7 @@ import axios from "axios";
 import DisplayData from "./Components/DisplayData";
 import NavBar from "./Components/NavBar";
 
-export const sum = (a, b) => a + b;
+// export const sum = (a, b) => a + b;
 
 class App extends React.Component {
   state = {
