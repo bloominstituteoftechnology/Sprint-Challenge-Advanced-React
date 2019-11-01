@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import axios from "axios";
 import DisplayData from "./Components/DisplayData";
+import NavBar from "./Components/NavBar";
 
 class App extends React.Component {
   state = {
@@ -25,6 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+         <NavBar/>
         <h1>Welcome to my Sprint Challenge App!</h1>
         <DisplayData data={this.state.APICall}/>
       </div>

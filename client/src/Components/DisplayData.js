@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 function DisplayData(props) {
   const { data } = props;
   useEffect(() => {
-    console.log(data);
+    console.log("coming from DisplayData.js", data);
   }, [data]);
 
   return (
