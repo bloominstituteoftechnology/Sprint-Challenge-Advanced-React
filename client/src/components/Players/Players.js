@@ -22,7 +22,7 @@ export default class Players extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div data-testid='players-chart'>
           <PlayerChart playerData={this.state.playerData} />
         </div>
       </div>
