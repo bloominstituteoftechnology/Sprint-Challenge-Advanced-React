@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from "@testing-library/react";
+import App, { sum } from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+test("it returns the sum of two numbers", () => {
+  expect(sum(2, 2)).toBe(4);
+})
+
+
+test('renders without crashing', () => {
+  render(<App />);
 });

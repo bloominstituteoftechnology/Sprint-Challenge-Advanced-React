@@ -4,6 +4,8 @@ import axios from "axios";
 import DisplayData from "./Components/DisplayData";
 import NavBar from "./Components/NavBar";
 
+export const sum = (a, b) => a + b;
+
 class App extends React.Component {
   state = {
     APICall: []
@@ -26,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-         <NavBar/>
+        <NavBar/>
         <h1>Welcome to my Sprint Challenge App!</h1>
         <DisplayData data={this.state.APICall}/>
       </div>
