@@ -1,0 +1,80 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.navbar {
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 139, 31);
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 3%;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px dashed whitesmoke;
+  width: 30vw;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: #f68819;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: rgb(233, 118, 10);
+  background-color: #313843;
+  .navbar {
+    background-color: #1F2022;
+    border: none;
+    
+  }
+}

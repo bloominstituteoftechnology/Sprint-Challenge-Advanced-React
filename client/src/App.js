@@ -1,29 +1,42 @@
 import React from 'react';
-import './App.css';
+import "./styles.scss";
 import axios from 'axios';
+import { PlayerCard } from './components/PlayerCard';
+import { NavigationBar } from './components/NavigationBar';
 
 class App extends React.Component {
-  state = {
-    players: []
+  constructor(){
+    super ();
+    this.state ={
+      players: [],
+    }
   }
 
   componentDidMount () {
     axios.get('http://localhost:5000/api/players')
-    .then(res => {
-      console.log("data",res)
+    .then(response => {
+      console.log("data",response)
       this.setState ({
-        players: res.data
+        players: response.data
       })
     
       })
-      .catch (err =>{
-        console.log("Data not received", err)
+      .catch (error =>{
+        console.log("Data not received", error)
     })
   }
   render () {
+
   return (
+
     <div >
-      <p>placeholder</p>
+        <NavigationBar />
+       {this.state.players.map (player => (
+        <PlayerCard key={player.id} name={player.name}
+        country= {player.country}
+        />
+    ))}
+      
     </div>
   );
   }
