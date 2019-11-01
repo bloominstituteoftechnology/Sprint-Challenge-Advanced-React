@@ -31,3 +31,26 @@
     transform: rotate(360deg);
   }
 }
+.bodyRed{
+  background-color: red;
+}
+.h1white{
+  color: white;
+}
+.h1red{
+  color: red;
+}
+.cardCont{
+  display:flex;
+  flex-wrap: wrap;
+}
+.cardClass{
+  border: 5px black solid;
+  width: 100%;
+}
+.bigCardClass{
+  border: 5px black solid;
+  width: 100%;
+  background-color: red;
+  color: white;
+}

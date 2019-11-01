@@ -6,6 +6,7 @@ import Players from './components/Players'
 function App() {
   return (
     <div className="App">
+      <h1 >Red or White??</h1>
       <Players/>
     </div>
   );
