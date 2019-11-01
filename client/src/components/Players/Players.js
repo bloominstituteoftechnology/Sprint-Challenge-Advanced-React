@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import Player from './Player';
+import PlayerChart from './PlayerChart';
 
 export default class Players extends React.Component {
   // create state to hold playerData
@@ -23,8 +23,7 @@ export default class Players extends React.Component {
     return (
       <div>
         <div>
-          <h2>Women's Soccer Players From the World Cup</h2>
-          <Player playerData={this.state.playerData} />
+          <PlayerChart playerData={this.state.playerData} />
         </div>
       </div>
     );

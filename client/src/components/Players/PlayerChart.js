@@ -10,7 +10,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-const Player = ({ playerData }) => {
+const PlayerChart = ({ playerData }) => {
   console.log(`Hey im player chart here is my playerData, ${playerData}`);
 
   return (
@@ -33,4 +33,4 @@ const Player = ({ playerData }) => {
   );
 };
 
-export default Player;
+export default PlayerChart;
