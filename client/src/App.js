@@ -26,9 +26,7 @@ class App extends React.Component {
     })
   }
   render () {
-
   return (
-
     <div >
         <NavigationBar />
        {this.state.players.map (player => (

@@ -16,7 +16,7 @@ html {
 
 .navbar {
   align-items: center;
-  border-bottom: 1px solid rgb(221, 139, 31);
+  border-bottom: 1px solid rgb(58, 113, 231);
   display: flex;
   height: 70px;
   justify-content: space-between;
@@ -30,7 +30,7 @@ html {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  border: 1px dashed whitesmoke;
+  border: 1px solid whitesmoke;
   width: 30vw;
   height: 30vh;
   justify-content: center;
@@ -38,7 +38,7 @@ html {
   margin: 10px;
 }
 .dark-mode__toggle {
-  background: papayawhip;
+  background: rgb(233, 213, 255);
   border-radius: 50px;
   border: 1px solid black;
   height: 20px;
@@ -47,8 +47,8 @@ html {
 }
 
 .dark-mode__toggle {
-  background: papayawhip;
-  border-radius: 50px;
+  background: rgb(142, 151, 228);
+  border-radius: 5px;
   border: 1px solid black;
   height: 20px;
   position: relative;
@@ -56,8 +56,8 @@ html {
 }
 
 .toggle {
-  background: #f68819;
-  border-radius: 50px;
+  background: #1928f6;
+  border-radius: 5px;
   height: 18px;
   left: 0;
   position: absolute;
@@ -70,10 +70,10 @@ html {
 }
 
 .dark-mode {
-  color: rgb(233, 118, 10);
-  background-color: #313843;
+  color: rgb(198, 207, 228);
+  background-color: #244477;
   .navbar {
-    background-color: #1F2022;
+    background-color: rgb(48, 52, 59);
     border: none;
     
   }
