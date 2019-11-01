@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
+import DisplayData from "./Components/DisplayData";
 
 class App extends React.Component {
   state = {
@@ -25,6 +26,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Welcome to my Sprint Challenge App!</h1>
+        <DisplayData info={this.state.APICall}/>
       </div>
     );
   }
