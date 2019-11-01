@@ -9,13 +9,10 @@ export default class Players extends React.Component {
   };
   // get player data from server
   componentDidMount() {
-    Axios.get('http://localhost:5000/api/players')
-      .then(res => {
-        // set player data to state
-        this.setState({ playerData: res.data });
-        console.log(`playerData, ${this.state.playerData}`);
-      })
-      .catch(err => console.log(`${err}`));
+    Axios.get('http://localhost:5000/api/players').then(res => {
+      // set player data to state
+      this.setState({ playerData: res.data });
+    });
   }
 
   //pass down player data to Player component and Render Player component

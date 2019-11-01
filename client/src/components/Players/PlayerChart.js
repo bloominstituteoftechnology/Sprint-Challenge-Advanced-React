@@ -7,12 +7,13 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer
+  ResponsiveContainer,
+  Label
 } from 'recharts';
 
 const PlayerChart = ({ playerData }) => {
   return (
-    <ResponsiveContainer width={'100%'} height={400}>
+    <ResponsiveContainer width={'90%'} height={400}>
       <BarChart
         // width={4000}
         width={2000}
@@ -24,11 +25,17 @@ const PlayerChart = ({ playerData }) => {
         <XAxis
           dataKey='name'
           fontSize={14}
-          tick={{ stroke: '#8884D8', strokeWidth: 0.5 }}
-        />
-        <YAxis />
+          tick={{ stroke: '#8884D8', strokeWidth: 0.5 }}>
+          <Label position='bottom' fontSize={12}>
+            Players
+          </Label>
+        </XAxis>
+        <YAxis>
+          <Label position='bottom' offset={-200} fontSize={12}>
+            Searches
+          </Label>
+        </YAxis>
         <Tooltip />
-        <Legend />
         <Bar dataKey='searches' barSize={30} fill='#d4d884' />
       </BarChart>
     </ResponsiveContainer>

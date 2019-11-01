@@ -12,6 +12,7 @@ const NavBar = () => {
       <h1>Women's Soccer Players Searches From the World Cup</h1>
       <div className='dark-mode__toggle'>
         <div
+          data-testid='dark-mode-toggle'
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
