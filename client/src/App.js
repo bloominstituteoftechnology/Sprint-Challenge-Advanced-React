@@ -1,10 +1,14 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import axios from "axios"
+import PlayerCard from "./PlayerCard"
 
 class App extends React.Component {
-    state = {
-        players: [],
+    constructor() {
+        super()
+        this.state = {
+            players: [],
+        }
     }
     componentDidMount() {
         axios
@@ -17,14 +21,22 @@ class App extends React.Component {
             })
             .catch(err => console.log(err))
     }
-
     render() {
         return (
             <>
                 <div className='App'>
                     <h1>All the Players</h1>
                 </div>
-                <div className='players'></div>
+                <div className='players'>
+                    {players.map(player => {
+                        return (
+                            <PlayerCard
+                                key={this.player.id}
+                                name={this.player.name}
+                            />
+                        )
+                    })}
+                </div>
             </>
         )
     }
