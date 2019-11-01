@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import axios from "axios";
+import DisplayData from "./Components/DisplayData";
+import NavBar from "./Components/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// export const sum = (a, b) => a + b;
+
+class App extends React.Component {
+  state = {
+    APICall: []
+  };
+  
+  componentDidMount() {
+
+    axios 
+    .get(`http://localhost:5000/api/players`)
+    .then(res => {
+      this.setState({
+        APICall: res.data
+      });
+      console.log("API data", this.state.APICall)
+    })
+    .catch(err => console.log(err));
+  }
+  
+  
+  render() {
+    return (
+      <div className="App">
+        <NavBar/>
+        <h1>Welcome to my Sprint Challenge App!</h1>
+        <DisplayData data={this.state.APICall}/>
+      </div>
+    );
+  }
 }
-
 export default App;
