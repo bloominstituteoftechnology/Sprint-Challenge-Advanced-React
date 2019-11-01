@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import Display from "./components/Display"
 import './App.css';
 
 class App extends React.Component {
@@ -13,8 +14,18 @@ class App extends React.Component {
   componentDidMount() {
     axios
       .get("http://localhost:5000/api/players")
-      .then(res => console.log(res))
+      .then(res => {
+        this.setState({data: res.data});
+      })
       .catch(err => console.log(err))
+  }
+
+  render() {
+    return(
+      <div>
+        <Display data={this.state.data} />
+      </div>
+    )
   }
 
 
