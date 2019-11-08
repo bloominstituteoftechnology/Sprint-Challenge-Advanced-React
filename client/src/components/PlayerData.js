@@ -4,7 +4,9 @@ import axios from 'axios';
 class PlayerData extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      player: data
+    };
   }
 
   componentDidMount() {
