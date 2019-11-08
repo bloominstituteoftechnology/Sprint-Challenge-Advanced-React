@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import PlayerData from './components/PlayerData.js'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      
+      <PlayerData />
     </div>
   );
 }
