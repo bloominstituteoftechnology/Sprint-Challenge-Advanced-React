@@ -7,11 +7,11 @@ import ToggleButton from "./Components/ToggleButton";
 function App() {
   return (
     <div className="App">
-      <div>
+      <>
         <ToggleButton />
         <Players />
         hello world
-      </div>
+      </>
     </div>
   );
 }

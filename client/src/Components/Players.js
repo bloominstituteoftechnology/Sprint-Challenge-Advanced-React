@@ -30,19 +30,19 @@ class Players extends React.Component {
     return (
       <div>
         {this.state.player.map(p => (
-          <Card>
+          <Card key={[0]}>
             <CardActionArea>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
+                <Typography key={[1]} gutterBottom variant="h5" component="h1">
                    {p.name}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="h2">
+                <Typography key={[2]} variant="body2" color="textSecondary" component="h2">
                   Country: {p.country}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="h2">
+                <Typography key={[3]} variant="body2" color="textSecondary" component="h2">
                   Searches: {p.searches}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="h2">
+                <Typography key={[4]} variant="body2" color="textSecondary" component="h2">
                   Searches: {p.id}
                 </Typography>
               </CardContent>
