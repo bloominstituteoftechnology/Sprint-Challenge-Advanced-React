@@ -24,7 +24,7 @@ class PlayerData extends React.Component {
   render() {
     return (
       <div>
-        { this.state.players.map(player => <div>{player.name}</div>) }
+        { this.state.players.map(player => <div key = {player.id}>{player.name}</div>) }
       </div>
     )
   }
