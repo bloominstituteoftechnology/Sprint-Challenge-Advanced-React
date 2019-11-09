@@ -1,26 +1,52 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Display from './components/Display'
 
-function App() {
+class App extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      players : []
+    
+}
+
+  }
+
+  // const [players, setPlayers]=useState([]);
+
+
+  componentDidMount(){
+   fetch(`http://localhost:5000/api/players`)
+   .then(res => res.json())
+   .then(res=> this.setState({players: res}))
+   .catch(err => console.log(err))
+
+}
+
+
+
+
+
+   
+
+
+ 
+  render(){
+
+    console.log(this.state.players)
+
   return (
+
+    
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Women's World Cup Soccer</h1>
       </header>
+       <Display players = {this.state.players}/>
     </div>
-  );
+  );}
 }
 
 export default App;
