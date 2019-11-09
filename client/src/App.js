@@ -1,13 +1,16 @@
 import React from 'react';
+import PlayerCard from './components/PlayerCard.js';
+import DarkModeToggle from './DarkModeToggle/DarkModeToggle.js'
 
-import PlayerData from './components/PlayerData.js'
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
+      <DarkModeToggle />
       <h1>Women's World Cup Players</h1>
-      <PlayerData />
+      <PlayerCard />
     </div>
   );
 }
