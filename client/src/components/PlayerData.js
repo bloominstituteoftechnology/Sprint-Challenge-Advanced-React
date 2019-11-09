@@ -5,7 +5,7 @@ class PlayerData extends React.Component {
   constructor() {
     super();
     this.state = {
-      player: data
+      players: []
     };
   }
 
@@ -13,6 +13,8 @@ class PlayerData extends React.Component {
     axios.get('http://localhost:5000/api/players')
       .then(res => {
         console.log(res.data);
+        const players = res.data;
+        this.setState({players})
       })
       .catch(err => {
         console.log(err);
@@ -20,7 +22,11 @@ class PlayerData extends React.Component {
   }
 
   render() {
-    return <div>working</div>
+    return (
+      <div>
+        { this.state.players.map(player => <div>{player.name}</div>) }
+      </div>
+    )
   }
 
 }
