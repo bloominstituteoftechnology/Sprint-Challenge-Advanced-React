@@ -33,10 +33,14 @@ it('renders without crashing', () => {
    const dark = wrapper.queryByText(/use dark mode/i);
    expect(dark).toBeInTheDocument();
    expect(dark).toBeVisible();
+   rtl.cleanup;
  })
+ it("contains a player name", () => {
+  const wrapper = rtl.render(<App />);
+  const playerName = wrapper.queryByText(/player name: [.*?]/i);
+  expect(playerName).toBeInTheDocument;
+  rtl.cleanup;
+});
 
- it('contains player name', ()=> {
-   const wrapper = rtl.render(<App/>)
-   const element = wrapper.queryByText(/player name:[*?]/i);
-   expect(element).toBeInTheDocument();
- })
+
+ 
