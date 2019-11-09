@@ -1,0 +1,61 @@
+.card-content {
+  width: 80%;
+}
+
+.card-container {
+  width: 20%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 6px 3px 3px white;
+  margin: 10px;
+  background: #404d55;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-content {
+  font-size: 15px;
+  text-align: left;
+  width: 70%;
+}
+
+.user-content h2,
+h3 {
+  margin: 0;
+}
+
+.user-content h2 {
+  font-size: 1rem;
+}
+.user-content h3 {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.user-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+a {
+  color: white;
+}
+.bottom {
+  margin: 5px 0;
+}
+
+.user-git {
+  width: 100%;
+}

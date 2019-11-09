@@ -1,3 +1,12 @@
+p,
+h2,
+h3 {
+  color: white;
+}
+h1 {
+  color: rgb(76, 40, 207);
+}
+
 .App {
   text-align: center;
 }
@@ -9,25 +18,78 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  background-color: #94a9d1;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-info {
+  width: 100%;
+  background: grey;
+}
+
+.card-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: #f68819;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}
+.dark-mode .App-header {
+  background-color: #1f2022;
+  border: none;
+}
+.dark-mode h1 {
+  color: white;
+}
+.dark-mode .player-info {
+  background: black;
+}
+.dark-mode .card-container {
+  background: #0b1318;
+}
+
+.navbar {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
