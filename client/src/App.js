@@ -4,7 +4,6 @@ import "./App.css";
 import Axios from "axios";
 import ApiList from "./components/ApiList";
 import NavBar from "./components/Navbar";
-// import ".styles.scss";
 
 class App extends React.Component {
   constructor() {

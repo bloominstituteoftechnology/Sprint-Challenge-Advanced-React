@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ApiDataCard from "./ApiDataCard";
+import * as rtl from "react-testing-library";
+import "jest-dom/extend-expect";
 
 it("renders without crashing", () => {
   const testPlayer = {
@@ -9,6 +11,5 @@ it("renders without crashing", () => {
     id: 999,
     searches: 40
   };
-  ReactDOM.render(<ApiDataCard user={testPlayer} key={testPlayer.id} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  rtl.render(<ApiDataCard user={testPlayer} key={testPlayer.id} />, div);
 });
