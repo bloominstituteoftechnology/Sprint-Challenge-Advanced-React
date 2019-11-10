@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayerCard from './components/PlayerCard.js';
-import DarkModeToggle from './DarkModeToggle/DarkModeToggle.js'
+import DarkModeToggle from './DarkModeToggle/useDarkModeToggle.js/index.js'
 
 import './App.css';
 
