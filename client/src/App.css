@@ -1,33 +1,23 @@
-.App {
+.App{
   text-align: center;
+  margin: 40px auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.dark-mode{
+  color:white!important;
+  background-color: #313843!important;
+}
+.dark-mode div.MuiPaper-root.MuiPaper-elevation1.makeStyles-paper-32.MuiPaper-rounded{
+  color:white!important;
+  background-color: #313843!important;
+}
+div.MuiPaper-root.MuiPaper-elevation1.makeStyles-paper-32.MuiPaper-rounded{
+  border: 1px solid #F62D6E!important;
+}
+.dark-mode .MuiTypography-root.MuiTypography-h1.MuiTypography-colorPrimary{
+  color: white!important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedSecondary{
+  margin: 20px 0!important;
+} 
