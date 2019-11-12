@@ -1,8 +1,10 @@
 import React, {Component, useState} from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import './App.css';
 import PlayerCard from './components/playerCard';
 import NavBar from './components/nav';
+import Graph from './components/graph';
 
 
 class App extends Component {
@@ -34,7 +36,18 @@ class App extends Component {
     console.log(this.state.players);
     return <header className="App-header">
       <NavBar/>
-      <PlayerCard players = {this.state.players}/>
+      <Route exact path="/" 
+      render ={() =>(
+      <PlayerCard
+      players = {this.state.players}
+      />)}/>
+
+    <Route path="/graph" 
+      render ={() =>(
+      <Graph
+      data = {this.state.players}
+      />)}/>
+     
     </header>
   }
 }

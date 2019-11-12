@@ -4,6 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 import PlayerCard from './components/playerCard';
 import NavBar from './components/nav'
+import Graph from './components/graph';
 
 
 afterEach(rtl.cleanup);
@@ -25,9 +26,16 @@ it("Renders Womens World Cup h1", () => {
   expect(wrapper.getByText(/women's world cup/i));
 });
 
-test("useLightMode is defined", () => {
+it("useLightMode is defined", () => {
   const lightmode = <useLightMode />;
   expect(lightmode).toBeDefined();
   expect(lightmode).not.toBeUndefined();
   expect(lightmode).not.toBeFalsy();
+});
+
+it("useLightMode is defined", () => {
+  const graph = <Graph />;
+  expect(Graphdata).toBeDefined();
+  expect(Graphdata).not.toBeUndefined();
+  expect(Graphdata).not.toBeFalsy();
 });
