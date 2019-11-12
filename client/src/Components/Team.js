@@ -6,13 +6,13 @@ class Team extends Component {
     super();
     this.state = {
       players: []
-    };  }
+    };
+  }
   componentDidMount(){
     fetch("http://localhost:5000/api/players")
       .then(res => res.json())
       //.then(res => console.log(res) )
       .then(res => {
-        //debugger;
         this.setState({players:res})})
       .catch(err => console.log('Error', err))
   }

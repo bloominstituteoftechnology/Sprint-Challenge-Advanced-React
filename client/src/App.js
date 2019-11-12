@@ -4,9 +4,6 @@ import './index.css';
 import Nav from './Components/Nav';
 import Team from './Components/Team';
 
-
-
-
 function App() {
  return (
    <div className='App'>

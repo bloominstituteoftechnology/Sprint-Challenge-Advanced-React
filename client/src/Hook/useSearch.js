@@ -6,7 +6,7 @@ import React, {useState, useEffect} from 'react';
 const useSearch = () => {
   const [search, setSearch] = useState('');
   const handleChange = event => {
-      setSearch(event.target.valuie)
+      setSearch(event.target.value)
   };
     
     return(
