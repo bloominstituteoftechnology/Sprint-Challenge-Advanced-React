@@ -22,4 +22,4 @@ const useDarkModeToggle = (key, initialValue) => {
     </div>
   );
 
-export default DarkModeToggle;
+export default useDarkModeToggle;

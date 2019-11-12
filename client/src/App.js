@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayerCard from './components/PlayerCard.js';
-import DarkModeToggle from './DarkModeToggle/useDarkModeToggle.js/index.js'
+import useDarkModeToggle from './DarkModeToggle/useDarkModeToggle.js'
 
 import './App.css';
 
@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <DarkModeToggle />
+      <useDarkModeToggle />
       <h1>Women's World Cup Players</h1>
       <PlayerCard />
     </div>
