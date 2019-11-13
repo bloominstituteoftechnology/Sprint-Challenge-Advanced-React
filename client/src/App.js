@@ -3,6 +3,7 @@ import './App.css';
 import './index.css';
 import Nav from './Components/Nav';
 import Team from './Components/Team';
+import Button from './Components/Button'
 
 function App() {
  return (
@@ -11,6 +12,7 @@ function App() {
    </div>
     
      <Nav />
+     <Button/>
      <Team />
    </div>
  );
