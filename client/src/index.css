@@ -38,7 +38,7 @@ body {
     transition: .2s;
     width: 20px;
  }
- .btn{
+ .data-testid{
   background:white;
   border: 1px solid gray;
   align-items: center;

@@ -10,7 +10,7 @@ const Button = ({label}) => {
     return (
      <div>
         <h3> {label} </h3>
-         <button className= 'btn'
+         <button data-testid='button'
 
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}>
