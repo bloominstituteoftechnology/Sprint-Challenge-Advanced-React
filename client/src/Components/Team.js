@@ -19,7 +19,6 @@ class Team extends Component {
   render() {
     return(
       <div className='app'>
-        <h3>Created By: Kayla Dailey</h3>
         {this.state.players.map(player => (
        <div key={player.id} className ='list'>
        <div className='card'>

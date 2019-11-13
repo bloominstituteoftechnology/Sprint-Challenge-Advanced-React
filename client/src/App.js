@@ -12,7 +12,7 @@ function App() {
    </div>
     
      <Nav />
-     <Button/>
+     <Button label ='Dark Mode'/>
      <Team />
    </div>
  );
