@@ -13,32 +13,4 @@ const App = () => {
   )
 }
 
-// const App = () => {
-//   const [darkMode, setDarkMode] = useDarkMode(false);
-//   const toggleMode = e => {
-//     e.preventDefault();
-//     setDarkMode(!darkMode);
-//   };
-
-//   return (
-//     <nav className="navbar">
-//       <h1>Dark Mode Toggle</h1>
-//       <div className="dark-mode__toggle">
-//         <button
-//           onClick={toggleMode}
-//           className={darkMode ? 'toggle toggled' : 'toggle'}>Toggle Here
-//         </button>
-//       </div>
-//     </nav>
-
-//     <section>
-//       <div className="PlayerCard">
-//         <PlayerData />
-//       </div>
-//     </section>
-
-
-//   )
-// };
-
 export default App;
