@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from "@testing-library/react";
 import Button from '../Components/Button';
 
 it ('renders button correctly',() => {
