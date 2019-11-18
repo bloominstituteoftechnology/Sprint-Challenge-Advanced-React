@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import PlayerList from './components/PlayerList';
+import toggleBar from './components/toggleBar';
 import {Button, Divider, Input, Segment} from 'semantic-ui-react';
 import axios from 'axios';
 
@@ -27,6 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+          <toggleBar />
           <Header />
           <PlayerList data={this.state.data} />
       </div>
