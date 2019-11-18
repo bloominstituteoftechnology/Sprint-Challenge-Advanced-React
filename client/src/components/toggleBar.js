@@ -19,10 +19,10 @@ const ToggleBar = () => {
   return (
     <nav className="navbar">
       <div className="dark-mode__toggle">
-        <ButtonToggle onClick={toggleMode}
+        <button onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'} >
           {darkMode ? "Light Mode" : "Dark Mode"}
-        </ButtonToggle>
+        </button>
       </div>
     </nav>
   );
