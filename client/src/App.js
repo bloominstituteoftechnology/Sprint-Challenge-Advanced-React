@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import PlayerList from './components/PlayerList';
 import {Button, Divider, Input, Segment} from 'semantic-ui-react';
 import axios from 'axios';
 
@@ -27,6 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
           <Header />
+          <PlayerList data={this.state.data} />
       </div>
     );
   }
