@@ -1,9 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+// import React from 'react';
+// import * as rtl from 'react-testing-library';
+// import 'jest-dom/extend-expect';
+// import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+// describe('App', () => {
+// it('Renders when app doesnt crash', () => {
+//  const wrapper = rtl.render(<App />);
+//  const h1 = wrapper.getByText(/help/i);
+// expect(h1) .toBeInTheDocument();
+
+// });
+// });
+import React from 'react';
+import * as rtl from '@testing-library/react';
+import App from './App';
+describe ('App', () => {
+test ('mounts to a kind of simulated DOM', () => {
+const simulatedDOM = rtl.render(<App />);
+console.log(simulatedDOM.debug());
+});  
 });
