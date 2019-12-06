@@ -8,7 +8,8 @@ function App () {
   return (
     <div>
       <Navbar/>
-      <Player/>
+      <h2 data-testid="title">The Champions</h2>
+      <Player data-testid='player'/>
     </div>
   )
 }
