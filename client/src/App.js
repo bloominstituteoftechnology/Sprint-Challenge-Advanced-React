@@ -5,11 +5,15 @@ import Nav from './Components/Nav'
 
 import styled from 'styled-components';
 
-const player = styled.div`
+const All = styled.div`
   display:flex;
   flex-wrap: wrap;
   padding: 10px;
   border: 3px black;
+`;
+
+const H1 = styled.h1`
+  font-size: 4rem;
 `;
 
 
@@ -17,9 +21,11 @@ function App() {
   return (
     
     <div className="App"> 
-        <h1> Women's World Cup</h1> 
+        <H1> Women's World Cup</H1> 
       
-        <Players/>
+        <All>
+          <Players/>
+        </All>
       
        
     </div>

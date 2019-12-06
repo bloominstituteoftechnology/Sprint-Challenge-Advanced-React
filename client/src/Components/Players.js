@@ -2,6 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import PlayCard from './PlayCard';
 
+import styled from 'styled-components';
+
+const Player = styled.div`
+    border: 3px solid black;
+    margin: 30px;
+    width: 230px;
+`
+
 
 class Players extends React.Component {
     state= {
@@ -26,7 +34,9 @@ class Players extends React.Component {
             players.map(player =>{
                 const {id} = player;
                 return (
-                    <PlayCard key= {id} user={player}/>
+                    <Player>
+                        <PlayCard key= {id} user={player}/>
+                    </Player>
                 )
             })
         )
