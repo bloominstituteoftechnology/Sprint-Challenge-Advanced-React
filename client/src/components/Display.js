@@ -11,8 +11,8 @@ class Display extends React.Component {
             <div className='players'>
                 {this.props.res.map(item => 
                 <div key={item.id}>
-                    <h2>{item.name}</h2>
-                    <p>{item.country}</p>
+                    <h2>Player: {item.name}</h2>
+                    <p>From: {item.country}</p>
                 </div>
                 )}
             </div>
