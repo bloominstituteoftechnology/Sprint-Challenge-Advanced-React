@@ -12,7 +12,8 @@ class Players extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log('CDM is running for players');
+		// console.log('CDM is running for players');
+		
 		// fetch("http://localhost:5000/api/players")
 		// .then(response => response.json())
 		// .then(response => console.log(response))
@@ -20,7 +21,7 @@ class Players extends React.Component {
 		axios
 			.get('http://localhost:5000/api/players')
 			.then((response) => {
-				console.log(response.data);
+				// console.log(response.data);
 				this.setState({
 					players: response.data
 				});
@@ -28,7 +29,13 @@ class Players extends React.Component {
 			.catch((error) => {
 				console.log('Data was not return', error);
 			});
+
+			window.addEventListener("resize", this.handleResize);
 	}
+
+	componentWillUnmount() {
+		window.removeEventListener("resize", this.handleResize);
+	  }
 
 	render() {
 		return (

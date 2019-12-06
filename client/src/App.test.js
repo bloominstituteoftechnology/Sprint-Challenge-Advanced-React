@@ -8,11 +8,11 @@ test('App renders without crashing', () => {
 	render(<App />);
 });
 
-test('Renders Players', () => {
+test('Renders Players Component', () => {
 	render(<Players />);
 });
 
-test('Check to see if ', () => {
+test('Check to see if the words "soccer players title" and "toggle mode" renders', () => {
 	const { getByText } = render(<Navbar />);
 
 	getByText(/soccer players title/i);
