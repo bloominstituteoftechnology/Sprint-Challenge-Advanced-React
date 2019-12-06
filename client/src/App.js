@@ -6,15 +6,17 @@ class App extends React.Component {
   constructor() {
     super();
       this.state = {
-        player: ""
+        player: "",
+        country: "",
+        searches: ""
       };
   }
 
   componentDidMount() {
-    axios.get('https://localhost:500/api/players')
+    axios.get('http://localhost:5000/api/players')
     .then(response => {
       console.log(response);
-      this.setState({name: response.data})
+      this.setState({player: response.data})
     })
   }
 
