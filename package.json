@@ -9,6 +9,11 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "jest": "^24.9.0",
+    "jest-dom": "^4.0.0",
+    "nock": "^11.7.0",
     "nodemon": "^1.17.2"
   },
   "scripts": {
