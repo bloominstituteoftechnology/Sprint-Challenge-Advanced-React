@@ -1,8 +1,13 @@
 import React from 'react'
+import { Player } from './Components/Players'
 
 
 function App () {
   return (
-    <div></div>
+    <div>
+      <Player/>
+    </div>
   )
 }
+
+export default App
