@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import App from './App';
+import Navbar from './components/Navbar';
+import Players from './components/Players';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('App renders without crashing', () => {
+	render(<App />);
+});
+
+test('Renders Players Component', () => {
+	render(<Players />);
+});
+
+test('Check to see if the words "soccer players title" and "toggle mode" renders', () => {
+	const { getByText } = render(<Navbar />);
+
+	getByText(/soccer players title/i);
+	getByText(/toggle mode/i);
 });
