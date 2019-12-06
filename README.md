@@ -23,10 +23,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+    although developers have come to favor functional components, there are still many components and much of the older code that 
+    still uses class components so it would be best to have the knowledge on how to work with class components as well.
 
+- [ ] Name three lifecycle methods and their purposes.
+    Render Method returns and displays jsx syntax, componentDidMount method is set to run after the Render method runs correctly 
+    and yopu can set the state of the application, constructor methor creates initial components with data ready to get passed on and rendered
+
+- [ ] What is the purpose of a custom hook?
+    custom hooks are valuable as in that they are hooks that can be made to do or execute any take within the context of the app and be reused.
+
+- [ ] Why is it important to test our apps?
+    testing an app from beggining to end is importand for building apps and doublechecking progress and standards that should be met throughout 
+    the developement of an app.
+    
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
