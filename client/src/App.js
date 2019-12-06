@@ -27,17 +27,16 @@ class App extends Component {
 
   render(){
     return(
-      <div>
+      <div className='Wholecard'>
         <Navbar/>
-        
+         
         {this.state.Players.map(player => {
           return(
-            <div>
-              
+            <div className = 'playercard'>
               <p>{player.name}</p>
               <p>{player.country}</p>
               <p>{player.searches}</p>
-              </div>
+            </div>
           )
         })}
       </div>
