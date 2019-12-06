@@ -6,7 +6,8 @@
   height: 70px;
   justify-content: space-between;
   padding: 0 3%;
-  width: 90vw;
+  width: auto;
+  margin: 2px;
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
@@ -38,9 +39,9 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  width: 100%;
-  border: red 1px solid;
-  margin: 0;
+  width: auto;
+  
+  margin: 1px;
 }
 
 
