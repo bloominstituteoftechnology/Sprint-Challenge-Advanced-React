@@ -3,6 +3,11 @@ import "./App.css";
 import Playerlist from "./Component/Playerlist";
 import NavBar from "./Component/NavBar";
 
+//Test
+exports.sum = function(a, b) {
+  return a + b;
+};
+
 function App() {
   return (
     <div className="App">
@@ -11,5 +16,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
