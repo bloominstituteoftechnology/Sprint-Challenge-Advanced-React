@@ -4,6 +4,7 @@ import './App.css';
 import axios from 'axios';
 import DataDisplayer from './DateDisplayer';
 import localStorage from './localStorage';
+import Navbar from './Navbar';
 class App extends React.Component {
   constructor() {
     super();
@@ -24,12 +25,20 @@ class App extends React.Component {
 
 
   render() {
-    console.log('this.state.playerData', this.state.playerData);
-    console.log('Object.keys(this.state.playerData).length', Object.keys(this.state.playerData).length);
+
     if (Object.keys(this.state.playerData).length !== 0) {
-      return <DataDisplayer playerData={this.state.playerData} />;
+
+      return (
+        <div className='App'>
+          <Navbar />
+          <DataDisplayer playerData={this.state.playerData} />;
+        </div>
+      )
     } else {
-      return <div>loading...</div>
+      return <div className='App'>
+        <Navbar />
+
+      </div>
     }
   }
 }
