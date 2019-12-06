@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.toggle {
+  margin-left: 47%;
+  color: #313843;
+  background: #ffffff;
+  border:solid black;
+  height: 18px;
+  width: 80px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+
+
+}
