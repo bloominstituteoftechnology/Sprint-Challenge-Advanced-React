@@ -26,7 +26,24 @@ class App extends React.Component {
     })
     .catch(err => console.log(err));
   }
-  handleChanges
+  handleChanges = e =>{
+    this.setState({
+      name: e.target.value
+    });
+  };
+  render(){
+    return(
+      <div>
+        <Navbar />
+        <PlayerList
+        data-testid="playerList"
+        name=(this.state.name)
+        id=(this.state.id)
+        country=(this.state.country)
+        list=(this.state.list)
+        />
+      </div>
+    );
+  }
 }
-
 export default App;
