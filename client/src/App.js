@@ -2,16 +2,18 @@ import React from 'react';
 import axios from "axios";
 import './App.css';
 import Navbar from "./components/Navbar";
+import PlayerList from "./components/PlayerList";
 import "@testing-library/jest-dom";
 
 
 class App extends React.Component {
-  state = (
+  state = {
     name: "",
     id: "",
     country: "",
     list: []
-  );
+  };
+
   componentDidMount(){
     axios
     .get("http://localhost:5000/api/players")
@@ -26,21 +28,24 @@ class App extends React.Component {
     })
     .catch(err => console.log(err));
   }
+
   handleChanges = e =>{
     this.setState({
       name: e.target.value
     });
   };
+
   render(){
     return(
       <div>
         <Navbar />
+
         <PlayerList
         data-testid="playerList"
-        name=(this.state.name)
-        id=(this.state.id)
-        country=(this.state.country)
-        list=(this.state.list)
+        name={this.state.name}
+        id={this.state.id}
+        country={this.state.country}
+        list={this.state.list}
         />
       </div>
     );
