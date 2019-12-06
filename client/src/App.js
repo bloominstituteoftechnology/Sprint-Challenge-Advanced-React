@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor() {
+    super();
+      this.state = {
+        player: ""
+      };
+  }
+
+  componentDidMount() {
+    axios.get('https://localhost:500/api/players')
+    .then(response => {
+      console.log(response);
+      this.setState({name: response.data})
+    })
+  }
+
+render() {
+  console.log('render is working')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Women's World Cup Trends</h1>
+      <div className="name">
+        {this.state.player.name}
+      </div>
     </div>
   );
+}
+
 }
 
 export default App;
