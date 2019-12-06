@@ -23,9 +23,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+You cannot use setState in a function component.
 - [ ] Name three lifecycle methods and their purposes.
+componentDidMount - loads data 
+componentWillUnmount - allows you to remove event listeners or anything that pertains solely to that component
+componentDidCatch - allows you to catch errors and log them. 
 - [ ] What is the purpose of a custom hook?
+allows you to reuse stateful logic and isolate state and effects. 
 - [ ] Why is it important to test our apps?
+determines whether it will work with the back-end. 
 
 ## Project Set Up
 
