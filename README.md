@@ -23,9 +23,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+
+For legacy codes, some companies may have codes still containing class components and you will have to be able to read, use and work with them if the need arises.
+
 - [ ] Name three lifecycle methods and their purposes.
+
+The Mounting phase: this is the birth of the component, this is where component did mount can be called. Your render method is invoked.
+
+The Growth Phase: this is where use state can be used and should component update, a call to render is forced.
+
+The Unmounting Phase: this is also the death phase of the component, it is when the component is taken of the screen, component will unmount is called and clean up is done.
+
 - [ ] What is the purpose of a custom hook?
+
+It is a hook built and customized by the developer to handle certain hook functions. It is reusable.
+
 - [ ] Why is it important to test our apps?
+
+It makes the code trust-able and minimizes the risk of a bug making it’s way into the production code.
 
 ## Project Set Up
 
