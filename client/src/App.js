@@ -3,6 +3,7 @@ import './App.css'
 import PlayerList from './Components/PlayerList';
 import NavBar from './Components/NavBar';
 
+//First phase of the lifecycle 
 class App extends React.Component {
   constructor () {
     super();
@@ -11,6 +12,8 @@ class App extends React.Component {
     }
   }
 
+  //Mounting Cycle
+  //"Commit Phase"
   componentDidMount() {
     fetch("http://localhost:5000/api/players")
     .then(res => res.json())
@@ -18,8 +21,9 @@ class App extends React.Component {
       this.setState({ player: data })
     })
     .catch(err => console.log(err))
-  }
+  } //end of mounting cycle 
 
+  //render function 
   render() {
     return (
       <div className = "App">
@@ -27,7 +31,8 @@ class App extends React.Component {
         <PlayerList players = {this.state.player} />
       </div>
     )
-  }
-}
+  };//end of render function 
+
+};
 
 export default App;
