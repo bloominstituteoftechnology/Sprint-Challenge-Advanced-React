@@ -1,17 +1,12 @@
 import React from 'react';
-
+import logo from './logo.svg';
 import './App.css';
-import Players from './components/Players';
+import Players from './components/Players'
 
 function App() {
-
-  
   return (
     <div className="App">
-
-      <div>
-        <Players/>
-      </div>
+      <Players/>
     </div>
   );
 }
