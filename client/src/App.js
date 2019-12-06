@@ -1,16 +1,16 @@
 import React from 'react';
-
 import Players from './components/Players';
 
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Players</h1>
-      <Players />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Navbar />
+			<Players />
+		</div>
+	);
 }
 
 export default App;

@@ -31,3 +31,23 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  border-bottom: 2px solid #ffffff;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  padding: 1.2%;
+  margin-bottom: 50px;
+}
+
+.navbar2 {
+  border-bottom: 2px solid #b1b1b1;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}

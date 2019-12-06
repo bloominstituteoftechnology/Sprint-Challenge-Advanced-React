@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import PlayersData from './PlayersData';
 
 class Players extends React.Component {
 	constructor() {
@@ -32,14 +33,7 @@ class Players extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Players.js</h1>
-				{this.state.players.map((player) => (
-					<div key={player.id}>
-						<h2>Name: {player.name}</h2>
-						<p>Country: {player.country}</p>
-						<p>Searches: {player.searches}</p>
-					</div>
-				))}
+				<PlayersData players={this.state.players} />
 			</div>
 		);
 	}
