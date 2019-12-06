@@ -7,6 +7,7 @@ const Navbar = () => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
+  console.log("navbar");
   return (
     <nav className="navbar">
       <h1>Womens Soccer</h1>
