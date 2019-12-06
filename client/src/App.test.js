@@ -5,8 +5,6 @@ import NavBar from './Components/NavBar.js';
 import PlayerCard from './Components/PlayerCard'
 
 
-import { render } from '@testing-library/react';
-
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -15,18 +13,17 @@ it('renders without crashing', () => {
 
 });
 
-it('renders without crashing', () => {
+it('renders NavBar', () => {
   const div = document.createElement('div');
   ReactDOM.render(<NavBar />, div);
   ReactDOM.unmountComponentAtNode(div);
 
 });
 
-it('renders without crashing', () => {
+it('renders PlayerCard', () => {
   const div = document.createElement('div');
   ReactDOM.render(<PlayerCard />, div);
   ReactDOM.unmountComponentAtNode(div);
-
 });
 
 
