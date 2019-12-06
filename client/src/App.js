@@ -5,8 +5,11 @@ import Nav from './Components/Nav'
 
 import styled from 'styled-components';
 
-const head = styled.p`
-  font-size: 4rem;
+const player = styled.div`
+  display:flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: 3px black;
 `;
 
 
@@ -15,8 +18,10 @@ function App() {
     
     <div className="App"> 
         <h1> Women's World Cup</h1> 
-        <Nav/>
+      
         <Players/>
+      
+       
     </div>
   );
 }
