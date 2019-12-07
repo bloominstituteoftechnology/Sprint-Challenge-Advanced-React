@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.dark-mode{
+  color: mediumseagreen;
+  background-color: hotpink;
+
+  }
+
+

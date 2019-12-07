@@ -11,7 +11,7 @@ const Nav = () =>{
 
     return (
         <div>
-             <div onClick={toggleMode} className={darkMode ? 'toogle toggled' : 'toggle'}/>
+            <button onClick={toggleMode} className={darkMode ? 'toggle toggled' : 'toggle'}>Get Colored</button>
         </div>
     )
 
