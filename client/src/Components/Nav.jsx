@@ -1,5 +1,13 @@
 import React from 'react';
 import useDarkMode from '../Hook/useDarkMode';
+import styled from 'styled-components';
+
+const Button = styled.button`
+    background-color: hotpink;
+    font-size: 2rem;
+    border-radius: 12px;
+
+`;
 
 const Nav = () =>{
     const [darkMode, setDarkMode] = useDarkMode(false);
@@ -11,7 +19,8 @@ const Nav = () =>{
 
     return (
         <div>
-            <button onClick={toggleMode} className={darkMode ? 'toggle toggled' : 'toggle'}>Get Colored</button>
+            <Button onClick={toggleMode} 
+            className={darkMode ? 'toggle toggled' : 'toggle'}>Get Colored</Button>
         </div>
     )
 
