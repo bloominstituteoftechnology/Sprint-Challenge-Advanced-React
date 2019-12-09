@@ -5,11 +5,11 @@ import axios from 'axios';
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 function ClassData() {
-  const [players, setPlayers] = useLocalStorage("state", { "players": [] });
+  const [players, setPlayers] = useLocalStorage("state", { "players": []}); // [storedValue, setValue]
 
   useEffect(() => {
     fetchApi();
-  }, []);
+  }, []); // runs once
 
   const fetchApi = () => {
     axios.get('http://localhost:5000/api/players')
@@ -20,6 +20,8 @@ function ClassData() {
         alert('An error with API has occurred: ', err)
       })
   }
+
+  console.log("players", players)
 
   return (
     <div data-testid="test">
