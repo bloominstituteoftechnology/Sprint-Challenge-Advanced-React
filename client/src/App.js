@@ -1,39 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { useLocalStorage } from './utils/input';
-import { usePlayerData } from './utils/api';
+import PlayerList from "./components/PlayerList";
+import axios from "axios";
+import SearchForm from "./components/SearchForm";
 
-function App() {
-  // Call custom hooks here
-  const [country, setCountry] = useLocalStorage("country", "United States");
-  const [searches, setSearches] = usePlayerData(country);
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: [],
+      name: "",
+      country: ""
+    };
+  }
 
-  return (
-    <>
+  componentDidMount() {
+    axios 
+    .get(`http://localhost:5000/api/players`)
+    .then(result => {
+        console.log(result.data);
+        this.setState({
+          data:Response.data,
+          name: Response.data.name,
+          country: Response.data.country
+        });
+    })
+    .catch(error => {
+        console.log("error:", error);
+    });
+  }
 
-      <h1>Most Searched Women's World Cup Players</h1>
-
-      <select value={country} onChange={e => setCountry(e.target.value)}>
-        <option value="United States">United States</option>
-        <option value="Brazil">Brazil</option>
-      </select>
-    
-
-      {searches.map(search => (
-        <div key={search.id}>
-        <h2>Player: {search.name}</h2>
-        <h2>Searches: {search.searches}</h2>
-        <h2>Country: {search.country}</h2>
+  render() {
+      return (
+        <div className="App">
+          <h1>Most Searched Women's Soccer Players</h1>
+          <SearchForm 
+            data={this.state.data}
+            name={this.state.name}
+            country={this.state.country}
+          />
+          <PlayerList 
+            data={this.state.data}
+            name={this.state.name}
+            country={this.state.country}
+          />
         </div>
-
-      ))}
-
-    <button onClick={() => setSearches([])}>
-        Clear Search
-      </button>
-
-    </>
-  );
+    )
+  }
 }
 
 export default App;
