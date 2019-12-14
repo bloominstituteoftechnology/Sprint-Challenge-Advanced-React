@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import axios from 'axios'
 import './App.css';
+import Display from './Display';
+import Navbar from './Navbar';
 
-function App() {
+
+class App extends React.Component {
+  constructor(){
+  super();
+
+  this.state = {
+    players: []
+  }
+}
+
+  componentDidMount() {
+  axios
+      .get('http://localhost:5000/api/players')
+      .then(res => {
+        this.setState({players: res.data})
+      })
+      .catch(err => console.log(err));
+  
+
+}
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div c='App'>
+      <Navbar />
+    {this.state.players.map(player => (
+      <Display name={player.name} country={player.country} searches={player.searches} id={player.id} key={player.id}  />
+    ))}
     </div>
   );
+}
 }
 
 export default App;
