@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import NavBar from './components/NavBar';
 import './App.css';
 
 class App extends React.Component {
@@ -30,13 +31,13 @@ class App extends React.Component {
     //console.log('in render: ',this.state.players);
     return (
       <div className="App">
-        <h1>Women's World Cup Players</h1>
+        <NavBar />
         <div className="player-cards">
         {this.state.players.map((player) => (
           <div className="player-card">
-            <h1>{player.name}</h1>
-            <p>Country: {player.country}</p>
-            <p>Number of Searches: {player.searches}</p>
+          <h1>{player.name}</h1>
+          <p>Country: {player.country}</p>
+          <p>Searches: {player.searches}</p>
           </div>
         ))}
         </div>
