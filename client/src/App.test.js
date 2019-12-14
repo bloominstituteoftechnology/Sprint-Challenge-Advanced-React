@@ -12,9 +12,9 @@ afterEach(rtl.cleanup);
 // });
 
 it('renders without crashing', () => {
-    const wrapper = rtl.render(<App/>);
-    wrapper.debug()
-   });
+	const wrapper = rtl.render(<App />);
+	wrapper.debug();
+});
 
 // it('Renders the div', ()=> {
 //     const wrapper = rtl.render(<App />)
@@ -28,5 +28,3 @@ it('renders without crashing', () => {
 test('fake test', () => {
 	expect(true).toBeTruthy();
 });
-
-
