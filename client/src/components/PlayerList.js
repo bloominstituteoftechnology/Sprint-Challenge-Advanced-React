@@ -1,7 +1,8 @@
 import React from 'react';
 import PlayerCard from './PlayerCard';
-import { Paper, Container } from '@material-ui/core';
+import { Paper, Container, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
+import useDarkMode from '../hooks/useDarkMode';
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -25,10 +26,17 @@ const useStyles = makeStyles(theme => ({
 
 const PlayerList = ({ players }) => {
     const classes = useStyles();
-
+    const [darkMode, setDarkMode] = useDarkMode(false);
+    const toggleMode = e => {
+      e.preventDefault();
+      setDarkMode(!darkMode);
+    };
     return(
         <>
         <Container className={classes.container}>
+          <Button variant="outlined" color="secondary" onClick={toggleMode}>
+          Toggle Dark Mode
+          </Button>
             {players.map(player => (
                 <Paper className={classes.paper}>
                   <PlayerCard key={player.id} player={player} />
