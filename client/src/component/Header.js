@@ -10,7 +10,7 @@ const Nav = ()=>{
     };
     return(
         <nav className = "navBar">
-            <h1 data-testid = "header">Women's World Cup Players</h1>
+            <h1 data-testid = "header">Women's World Cup</h1>
             <div className = "dark-mode__toggle">
                 <div
                     data-testid = "toggle"
