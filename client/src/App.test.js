@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render, within, getByText } from '@testing-library/react';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+import PlayersCard from './PlayersCard.js';
+import PlayersList from './PlayersList.js';
+
+test('should have text [player name]',  async ()=>{
+    const {findByText} = await render(<PlayersCard />)
+    findByText(/alex morgan/i);
+}) 
+
+
+
+
