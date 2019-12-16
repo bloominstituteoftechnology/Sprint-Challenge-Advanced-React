@@ -1,14 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { Card, Segment, Flag } from "semantic-ui-react";
+import useStyling from '../hooks/useStyling'
 
 
 
 const PlayerCardContent = props => {
 
-  // const eventHandler =(event) => {
-  //   console.log(event)
-  // }
-  // onMouseEnter={eventHandler}
+  const [eventHandler, eventHander2] = useStyling()
 
   return (
     <Card.Group itemsPerRow={6}>
@@ -19,7 +17,7 @@ const PlayerCardContent = props => {
               <Card.Header>{player.name}</Card.Header>
         <Card.Meta>{player.country}</Card.Meta>
             </Card.Content>
-            <Segment >
+            <Segment className='wobble' onMouseEnter={eventHandler} onMouseLeave={eventHander2} >
               <Flag name={player.country.toLowerCase()} />
             </Segment>
           </Card>

@@ -1,6 +1,6 @@
 import React from "react";
 
-// import './App.css';
+import './App.css';
 import { Container } from "semantic-ui-react";
 
 //components
