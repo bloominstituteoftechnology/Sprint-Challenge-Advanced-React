@@ -2,6 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 
 import PlayerList from './Components/PlayerList';
+import Nav from './Components/Nav';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ class App extends React.Component {
         <header className="App-header">
           <h1>2019 Women's World Cup Players</h1>
           <h4>*Based on total Google searches</h4>
+          <Nav />
         </header>
 
         <div className='players'>
@@ -37,6 +39,5 @@ class App extends React.Component {
     );
     }
   }
-
-
+  
 export default App;
