@@ -4,7 +4,7 @@ import './App.css';
 import { Container } from "semantic-ui-react";
 
 //components
-import PlayerCard from "./components/PlayerCard";
+import PlayerCard from './components/PlayerCard'
 import Search from './components/SearchCountery'
 //data
 import Axios from "axios";

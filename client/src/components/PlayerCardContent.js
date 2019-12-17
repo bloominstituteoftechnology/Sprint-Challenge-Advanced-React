@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Card, Segment, Flag } from "semantic-ui-react";
+import { Card, Segment, Flag, Header } from "semantic-ui-react";
 import useStyling from '../hooks/useStyling'
 
 
@@ -15,6 +15,7 @@ const PlayerCardContent = props => {
           <Card key={player.id} style={{ textAlign: "center" }}>
             <Card.Content>
               <Card.Header>{player.name}</Card.Header>
+              <Card.Meta>of</Card.Meta>
         <Card.Meta>{player.country}</Card.Meta>
             </Card.Content>
             <Segment className='wobble' onMouseEnter={eventHandler} onMouseLeave={eventHander2} >
