@@ -1,0 +1,17 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.darkmode-button {
+    background-color: whitesmoke;
+    height: 50px;
+    margin: 15px 0;
+    border-radius: 45%;
+    border: 1px solid black;
+}
+
+.dark-mode {
+    color: rgb(255, 251, 251);
+    background-color: rgb(26, 25, 31);
+}  
