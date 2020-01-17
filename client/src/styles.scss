@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+
 }
 ol,
 ul {
@@ -145,8 +146,10 @@ h1 {
 }
 
 .playerList {
-    border: solid red 1px;
-    text-align: center;
+  width: 300px;
+  height: 100px;
+  padding-left: 200px;
+ 
 }
 h2 {
   font-size: 1.8rem;
@@ -158,7 +161,7 @@ h4 {
 
 img {
   height: auto;
-  width: 100%;
+  width: 5%;
 }
 
 .flex-spacer {
@@ -219,12 +222,17 @@ img {
 
   .navbar {
     background-color: #1F2022;
-    border: none;
+    border: none;  
   }
 }
 
 .box {
-    border: solid red 1px;
-    width: 80rem;
-    margin-top: 30px;
+   display: flex;
+   justify-self: center;
+   margin-top: 3rem;
+   width: 150px;
+   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+   padding: 1rem;
+   
 }
+

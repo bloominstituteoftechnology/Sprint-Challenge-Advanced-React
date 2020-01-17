@@ -28,6 +28,13 @@ describe("does player name render", () => {
   })
 })
 
+describe("does player name render", () => {
+  test('renders player name', () => {
+    const wrapper = rtl.render(<Player />)
+    const elem = wrapper.queryAllByText(/megan rapinoe/i)
+  })
+})
+
 it('renders PlayerCard', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Player />, div);
