@@ -8,7 +8,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.Container {
+.Container{
   background-color: red;
   color: lightgrey;
   text-align: center;
@@ -16,15 +16,14 @@
   margin: auto auto;
 }
 
-.playercard {
+.playercard{
   background-color: blue;
-  width: 75%;
-  margin: 10px auto;
-  padding-top: 10px;
+  width: 75%; margin: 10px  auto;
+  padding-top: 10px; 
 }
 
 .dark-mode__toggle {
-  background: darkmagenta;
+  background: sienna;
   border-radius: 50px;
   border: 1px solid black;
   height: 20px;
@@ -49,12 +48,12 @@
 .dark-mode {
   color: #fff;
   background-color: #313843;
-
-  .navbar {
-    background-color: #1f2022;
+}
+  .navbar: {
+    background-color: #1F2022;
     border: none;
   }
-}
+
 
 .navbar {
   align-items: center;
@@ -63,11 +62,12 @@
   height: 70px;
   justify-content: space-around;
   padding: 3% 0%;
-  width: 100%;
+  width:100%;
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
 }
+
 
 @keyframes App-logo-spin {
   from {

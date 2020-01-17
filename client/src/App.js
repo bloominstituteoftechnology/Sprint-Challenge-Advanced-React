@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount(){
     axios.get('http://localhost:5000/api/players').then(response =>{
-      console.log(response.data)
+      
 
       this.setState ({
 
@@ -36,12 +36,12 @@ class App extends Component {
               <p>{player.name}</p>
               <p>{player.country}</p>
               <p>{player.searches}</p>
-              </div>
+            </div>
           )
         })}
       </div>
     )
-      }
+  }
 }
 
 export default App;

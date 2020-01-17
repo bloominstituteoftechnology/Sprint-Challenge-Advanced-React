@@ -7,6 +7,7 @@ const Navbar = () => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
+  
   return (
     <nav className="navbar">
       <h1>Players</h1>
