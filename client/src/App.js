@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import axios from 'axios'
+import Display from './components/Display';
+import Navbar from './components/Navbar';
 
-function App() {
+
+//data comes in as an array of data with this obj VVVVVVVV
+// // {
+//   name: "Alex Morgan",
+//   country: "United States",
+//   searches: 100,
+//   id: 0
+// }
+/////////////////////////////////////////////////////////////
+class App extends Component {
+
+  constructor(){
+    super()
+    this.state = {
+      array: [{
+        name: "dude",
+        country: "yes",
+        searches: 0,
+        id: 0
+      }]
+    }
+  }
+
+  componentDidMount(){
+    axios.get('http://localhost:5000/api/players').then(
+      res => {
+        console.log(res.data)
+       this.setState({array: res.data})
+      }
+    )
+  }
+
+
+  
+  render(){
+    console.log(this.state.array[0].name)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+        <div className="card-container">
+            {this.state.array.map((elm)=>{
+              return(
+                <Display name={elm.name} country={elm.country} searches={elm.searches} id={elm.id} key={elm.id} />
+              )
+            })}
+        </div>
     </div>
   );
+  }
 }
 
 export default App;
