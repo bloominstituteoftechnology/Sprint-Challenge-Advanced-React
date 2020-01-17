@@ -1,11 +1,9 @@
-.App {
-  text-align: center;
+body{
+  background-color: pink;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Container {
+  background-image: url("http://img.fifamuseum.com/mm/Photo/Stories/Blog/02/62/04/79/2620479_P3.jpg");
 }
 
 .App-header {
@@ -18,9 +16,65 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.Container {
+  background-color: grey;
+  color: lightgrey;
+  text-align: center;
+  width: 50%;
+  margin: auto auto;
+}
 
-.App-link {
-  color: #61dafb;
+.playercard {
+  opacity: 40%;
+  background-color: black;
+  width: 75%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+p {
+  font-weight: bold;
+}
+
+.dark-mode__toggle {
+  background: sienna;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: black;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}
+
+.navbar {
+  align-items: center;
+  border-bottom: 1px dashed rgb(221, 221, 221);
+  display: flex;
+  height: 70px;
+  justify-content: space-around;
+  padding: 3% 0%;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
 }
 
 @keyframes App-logo-spin {

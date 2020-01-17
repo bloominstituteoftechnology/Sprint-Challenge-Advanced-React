@@ -4,11 +4,14 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.19.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
     "express": "^4.15.2"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.4.0",
+    "jest-dom": "^4.0.0",
     "nodemon": "^1.17.2"
   },
   "scripts": {
