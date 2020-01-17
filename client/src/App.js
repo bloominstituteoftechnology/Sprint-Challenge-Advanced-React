@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MainHeader from "./components/Navbar";
+import PlayersList from "./components/PlayersList";
+import PlayersSearchForm from "./components/PlayersSearchForm";
+import "./App.css";
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+      name: "",
+      country: ""
+    };
+  }
+
+  componentDidMount() {
+    // console.log("Component did mount!");
+
+    axios
+      .get('http://localhost:5000/api/players')
+      .then((res) => {
+        console.log(res.data);
+        this.setState({
+          data: res.data,
+          name: res.data.name,
+          country: res.data.country
+        });
+      })
+      .catch(error => {console.log(error)});
+  }
+  render() {
+    return (
+      <div className="App">
+        <MainHeader />
+        <PlayersSearchForm
+          data={this.state.data}
+          name={this.state.name}
+          country={this.state.country}
+        />
+        <PlayersList
+          data={this.state.data}
+          name={this.state.name}
+          country={this.state.country}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
