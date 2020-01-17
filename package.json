@@ -4,10 +4,12 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.0.0",
     "axios": "^0.19.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "jest": "^24.9.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.2"
