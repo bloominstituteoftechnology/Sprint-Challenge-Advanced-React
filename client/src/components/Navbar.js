@@ -7,11 +7,12 @@ const Navbar = () => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
-  
+
   return (
     <nav className="navbar">
-      <h1>Players</h1>
+      <h1>Most Searched Players During the Women's World Cup 2019</h1>
       <div className="dark-mode__toggle">
+      {/* <h5>Representing </h5> */}
         <div
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
