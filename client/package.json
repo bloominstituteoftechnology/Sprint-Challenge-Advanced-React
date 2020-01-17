@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/react": "^9.4.0",
     "axios": "^0.19.1",
     "core-js": "^3.6.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.3.0",
+    "react-testing-library": "^8.0.1",
     "typescript": "^3.7.5"
   },
   "scripts": {
