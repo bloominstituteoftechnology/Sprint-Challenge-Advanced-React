@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useLocalStorage from './Hooks/useLocalStorage';
+import { useLocalStorage } from './useLocalStorage';
 
 const useNameInStorage = () => {
   const [userName, setUserName] = useLocalStorage('userName', '');
