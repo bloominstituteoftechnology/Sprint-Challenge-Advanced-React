@@ -1,6 +1,7 @@
 import React from 'react';
 import Players from './Components/Players';
 import NavBar from './Components/NavBar';
+
 //import components here
 import './App.css';
 
