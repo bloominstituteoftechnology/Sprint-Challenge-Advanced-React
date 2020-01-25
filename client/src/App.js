@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import PlayerCard from "./components/PlayerCard.js"
 
 class App extends React.Component{
   constructor(){
@@ -21,7 +22,8 @@ class App extends React.Component{
     return (
       <div className="App">
         <header className="App-header">
-        hello there
+        <PlayerCard
+        players ={this.state.players}/>
         </header>
       </div>
     );
