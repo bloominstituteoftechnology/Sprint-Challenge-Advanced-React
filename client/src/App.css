@@ -1,14 +1,144 @@
+@media(min-width: 1000px) {
+  .Players{
+    background-color: #282c34;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);   
+    padding: 0 10% 0% 10%;  
+    margin: 0 0 1% 0;
+  } 
+  .App {
+    text-align: center;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 0% 5% 0%;
+    background-color: #797475;
+   
+    
+  }
+}
+
+
+@media (min-width: 800px) {
+  .Players {
+    background-color: #282c34;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);   
+    padding: 0 30% 0% 30%;  
+    margin: 0 0 1% 0;
+  }
+  .App {
+    text-align: center;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 10% 5% 10%;
+    background-color: #797475
+    
+  }
+  .players-info {
+    background-color: #282c34;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);   
+    padding: 0 30% 0% 30%;  
+    margin: 0 0 1% 0;
+  }   
+ 
+ h3 {
+   color: #797475;
+ }
+ P {
+   color: #797475;
+ }
+}
+/* ---------------end of 800 media query---- */
+@media(min-width: 700px){
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+  .Players {
+    background-color: #282c34;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);   
+    padding: 0 30% 0% 30%;  
+    margin: 0 0 1% 0;
+  }
+
+  .App {
+    text-align: center;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    background-color: #797475;
+    padding: 0 10% 5% 10%;
+  }
+  
+  
+  .players {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: gray;  
+    margin: 0 0 1% 0;     
+  } 
+  img {
+    border-radius: 5%;
+    width: 400px;
+  }
+  a:hover {
+    color: red;
+  }
+  a {
+    color:white;
+  }
+  
+  a {
+    word-wrap: normal;
+  }
+  h3 {
+    color: #797475;
+  }
+  P {
+    color: #797475;
+  }
+} 
+
+/* -----------------end of media query 500------------ */
+* {
+  font-family: 'Roboto', sans-serif;
+}
 .App {
   text-align: center;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  background-color: #797475;
+  padding: 0 10% 5% 10%;
+}
+.players-info {
+  background-color: #282c34;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);   
+  padding: 0 30% 0% 30%;  
+  margin: 0 0 1% 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
+.players {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -16,18 +146,26 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: gray;  
+  margin: 0 0 1% 0;     
+} 
+img {
+  border-radius: 5%;
+  width: 250px;
+}
+a:hover {
+  color: red;
+}
+a {
+  color:white;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  word-wrap: normal;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  color: #797475;
+}
+P {
+  color: #797475;
 }
