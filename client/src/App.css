@@ -57,6 +57,24 @@ nav h1{
 .dark-mode p, h1 {
   color:white;
 }
+.card{
+  border:1px solid gray;
+  width:20%;
+  margin: 10px;
+}
+.playersCardBox{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.mainPlayersConatiner{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
 
 
 

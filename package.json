@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@testing-library/jest-dom": "testing-library/jest-dom",
+    "@testing-library/react": "^9.4.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
     "express": "^4.15.2"
