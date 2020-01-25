@@ -4,12 +4,10 @@ import useNameInStorage from '../Hooks/useNameInStorage';
 const Navbar = () => {
 
   return (
-    <nav>
-      <h2>Hook is here!</h2>
-
+    <div>
       <useNameInStorage />
-    </nav>
-  );
-};
+    </div>
+  )
+}
 
 export default Navbar;

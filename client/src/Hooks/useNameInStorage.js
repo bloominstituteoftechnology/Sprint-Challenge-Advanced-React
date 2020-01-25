@@ -15,6 +15,8 @@ const useNameInStorage = () => {
       />
     </div>
   )
+
+  return [userName, setUserName];
 }
 
 export default useNameInStorage;
