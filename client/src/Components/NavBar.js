@@ -1,20 +1,13 @@
-  import React, { useState } from 'react';
+import React, { useState } from 'react';
+import useNameInStorage from '../Hooks/useNameInStorage';
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleMode = e => {
-    e.preventDefault();
-    setDarkMode(!darkMode);
-  };
+
   return (
     <nav>
-      <h2>Toggle for Dark Mode</h2>
-      <div>
-        <div
-          onClick={toggleMode}
-          className={darkMode ? 'toggle toggled' : 'toggle'}
-        />
-      </div>
+      <h2>Hook is here!</h2>
+
+      <useNameInStorage />
     </nav>
   );
 };

@@ -27,6 +27,7 @@ class App extends React.Component {
     return(
       <div>
         <NavBar />
+
         <h1>Woman's World Cup</h1>
         {this.state.players.map(players => {
           return (

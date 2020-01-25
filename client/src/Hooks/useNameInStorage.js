@@ -1,7 +1,6 @@
 import React from 'react';
 
 import useLocalStorage from './Hooks/useLocalStorage';
-import e from 'express';
 
 const useNameInStorage = () => {
   const [userName, setUserName] = useLocalStorage('userName', '');
@@ -11,7 +10,7 @@ const useNameInStorage = () => {
       <input 
         type='text'
         placeholder='Enter name here!'
-        value='name'
+        value={userName}
         onChange={e => setUserName(e.target.value)}
       />
     </div>
