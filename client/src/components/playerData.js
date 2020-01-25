@@ -21,10 +21,10 @@ const PlayerData = () => {
 
     return (
         <>
-        <div>
+        <div className='player-container'>
         {player.map(player => {
             return (
-            <div>    
+            <div className='container'>    
             <h2>{player.name}</h2>
             <h3>{player.country}</h3> 
             </div>

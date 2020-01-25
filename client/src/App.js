@@ -27,6 +27,9 @@ function App() {
 
     <div className="App">
     <button onClick={toggleTheme}>Toggle Theme</button>
+    <h1>Women's World Cup</h1>
+    <h2>Players</h2>
+    
     <GlobalStyles />
       <header className="App-header">
        <PlayerData />
