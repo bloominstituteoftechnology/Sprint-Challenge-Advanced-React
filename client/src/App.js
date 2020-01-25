@@ -28,7 +28,9 @@ class App extends React.Component {
       <div>
         <h1>Woman's World Cup</h1>
         {this.state.players.map(players => {
-          return <PlayerCard key={players.id} players={players} />
+          return (
+            <PlayerCard key={players.id} players={players} />
+          )
         })}
       </div>
     )
