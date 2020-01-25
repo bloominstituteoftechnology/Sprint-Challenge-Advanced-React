@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import PlayerCard from "./PlayerCard";
 export default class Player extends React.Component{
     constructor() {
         super();
