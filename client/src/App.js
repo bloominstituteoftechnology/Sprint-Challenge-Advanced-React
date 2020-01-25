@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import PlayerCard from "./components/PlayerCard.js"
+import NavBar from "./components/NavBar.js"
 
 class App extends React.Component{
   constructor(){
@@ -22,6 +23,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <header className="App-header">
+        <NavBar players ={this.state.players}/>
         <PlayerCard
         players ={this.state.players}/>
         </header>
