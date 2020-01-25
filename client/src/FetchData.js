@@ -1,41 +1,46 @@
 import React from "react"
-
-class Players extends React.Component {
-constructor(){
+import PlayersForm from "./PlayersForm";
+import Players1 from "./Players1"
+class FetchData extends React.Component {
+    constructor(){
     super();
     this.state= {
-        Players: []
+        data: []
     }
+};
 
-addNewPlayer= (player, country) =>{
-const newPlayer = {
+    addNewPlayer= (player, country) =>{
+    const newPlayer = {
     name: player,
     country: country,
     id: Date.now()
-};
-this.setState(
-    Players: [newPlayer, ...this.state.Players]
-)
-}
-componentDidMount(){
-    const getPlayers = () =>{
+    };
+    this.setState(
+    {data: [newPlayer, ...this.state.data]}
+    );
+    }
+
+    componentDidMount() {
         fetch('http://localhost:5000/api/players')
-        .then (res => res.data.json())
-        .then(console.log (res.data))
+        .then (res => res.json())
+        .then(player => {this.setState({ data: player})}
+        )
         .catch (err => console.log(err));
     }
 
-}
-
-
-
-
-render(){
+    render()
+    {
     return(
-        <div></div>
+        <div className = "player-card">
+            <PlayersForm addNewPlayer={this.addNewPlayer}/>
+            {this.state.data.map(player =>
+               { return <Players1 key = {player.id} country = {player.country}/>}
+            )}
+        </div>
     )
-}
+    }
 
 
 
 }
+export default FetchData

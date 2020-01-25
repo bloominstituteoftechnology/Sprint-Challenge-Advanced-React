@@ -7,7 +7,7 @@ const PlayersForm = props => {
 
     const resetValues = e =>{
         e.preventDefault();
-        props.addNewPlayer(playerName, country);
+        props.addNewPlayer(playerName, countryName);
         clearnameInput();
         clearCountryInput();
     };
@@ -35,3 +35,4 @@ const PlayersForm = props => {
         </form>
     )
 }
+export default PlayersForm
