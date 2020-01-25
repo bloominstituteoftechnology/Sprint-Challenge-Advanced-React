@@ -3,13 +3,8 @@ import { render } from '@testing-library/react';
 import App from './App';
 import Players from './components/Players';
 
-
-describe('App', () => {
-  test('renders without failure', () => { 
-    render(<App />);
-  });
-  test('renders Players without failure', () => {
-    render(<Players />);
-  });
-  
+it("renders without failure", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(<App />, div);
+  ReactDOM.unmountComponentAtNode(div);
 });
