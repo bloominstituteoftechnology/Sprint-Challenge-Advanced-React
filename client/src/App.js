@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PlayerCard from "./PlayerCard";
-import PlayerList from "./PlayerList";
+import Navigationbar from './hooks/Navigationbar';
+// import {useDarkMode}  from "./hooks/useDarkMode";
+
+
 
 
 
@@ -24,6 +25,7 @@ class App extends React.Component{
     <div className="App">
        <h1> Soccer Players</h1>
        <div>
+       <Navigationbar/>
        {this.state.players.map(player=> 
        <div key={player.id}>
        <h2> Name : {player.name}</h2>
@@ -32,6 +34,7 @@ class App extends React.Component{
        </div>
        )}
        </div>
+    
     </div>
   );
 }
