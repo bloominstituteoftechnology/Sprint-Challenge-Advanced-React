@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+.player-cards {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.player-cards h2{
+  margin: 1rem;
+}
+
+.name {
+  color: lightgrey;
+}
