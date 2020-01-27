@@ -13,3 +13,12 @@ it( 'tests if the page contains the text' ,()=>{
   const expected=rtl.render(<App/>);
   expect(expected.getByText(/players/i))
 });
+
+// it( 'tests if the page contains the text' ,()=>{
+//   const wrapper = rtl.render(<App />);
+//   // IMPORTANT
+//   // wrapper.queryByText() returns either the node, or null:
+//   const hasNameText = wrapper.queryByText(/Name/i);
+//   expect(hasNameText).toBeInTheDocument();
+
+// })

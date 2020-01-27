@@ -14,7 +14,7 @@ const Navigationbar=()=>{
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         >
-        click</button>
+        Switch to DARK</button>
       </div>
       </nav>
  )
