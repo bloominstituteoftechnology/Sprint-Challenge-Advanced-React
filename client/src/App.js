@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import axios from 'axios'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavBar from './components/Navbar'
+import CardMaker from './components/CardMaker'
+
+export default class App extends React.Component {
+  constructor() {
+    super()
+    this.state = { soccerPlayers: [] }
+  }
+
+  componentDidMount() {
+    axios.get(`http://localhost:5000/api/players`)
+      .then( (res) => {
+        console.log(res)
+        this.setState( {soccerPlayers: res.data})
+        console.log(this.state)
+      })
+  }
+
+  render() {
+    return (
+      <>
+      <NavBar />
+      {this.state.soccerPlayers.map( (player) => {
+        return <CardMaker key={player.id} player={player} />
+      })}
+      </>
+    )
+  }
 }
-
-export default App;
