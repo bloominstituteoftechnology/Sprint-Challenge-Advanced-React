@@ -24,7 +24,7 @@ const PlayerData = () => {
         <div className='player-container'>
         {player.map(player => {
             return (
-            <div className='container'>    
+            <div key={player.name} className='container'>    
             <h2>{player.name}</h2>
             <h3>{player.country}</h3> 
             </div>

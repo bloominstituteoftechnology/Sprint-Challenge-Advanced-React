@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PlayerData from './components/playerData';
 import { lightTheme, darkTheme } from './theme';
