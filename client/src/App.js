@@ -6,14 +6,21 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = "";
+   this.state = {
+      players: [],
+     
+    };
+  
 
   }
+
+
   componentDidMount(){
-    fetch('http://localhost:5000/api/players')
-    .then( data =>  this.setState({data}));
-       
-  } 
+fetch('http://localhost:5000/api/players')
+.then(
+
+   
+
   render() {
     return(
       <div className="App">
