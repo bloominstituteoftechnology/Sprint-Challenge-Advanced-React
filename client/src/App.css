@@ -37,6 +37,7 @@
   border-radius: 30px;
   padding: 5px;
   margin: 10px 0px;
+  transition: 3s;
 }
 
 .theme-button:hover {
@@ -44,7 +45,7 @@
   background-color: black;
   font-weight: bold;
   box-shadow: 2px 2px 5px;
-  transition: 2s;
+  transition: 3s;
 }
 
 .dark-mode {
