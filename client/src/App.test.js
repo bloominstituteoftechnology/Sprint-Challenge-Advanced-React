@@ -12,10 +12,15 @@ describe('App renders without crashing', () => {
   test("Does App render?", () => {
     rtl.render(<App />)
   })
-})
+});
 
-it('renders Player', () => {
+it('Renders Player without failure', () => {
   const div=document.createElement('div');
   ReactDOM.render(<Player />, div);
   ReactDOM.unmountComponentAtNode(div);
-})
+});
+
+test("Renders Women's World Cup Players", () => {
+  const box = rtl.render(<App />);
+  expect(box.getByText(/women's world cup players/i));
+});
