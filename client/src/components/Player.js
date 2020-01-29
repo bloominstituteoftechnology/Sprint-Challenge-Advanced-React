@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import PlayerCard from "./PlayerCard";
 export default class Player extends React.Component{
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
           players: []
         }
@@ -12,7 +12,6 @@ export default class Player extends React.Component{
     componentDidMount(){
         axios.get("http://localhost:5000/api/players")
         .then(response => {
-          console.log(response);
           this.setState({
             players: response.data
           })
@@ -25,13 +24,13 @@ export default class Player extends React.Component{
     render() {
         return (
           <div>
-            {this.state.players.map(player => (
+            {this.state.players.map(player => 
               <PlayerCard
-                key={player.id}
                 name={player.name}
                 country={player.country}
+                searches={player.searches}
               />
-            ))}
+            )}
           </div>
         )
     }

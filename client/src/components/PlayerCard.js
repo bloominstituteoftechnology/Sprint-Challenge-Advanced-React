@@ -31,6 +31,7 @@ export default function PlayerCard(props) {
         <Styled>
             <StyledName>{props.name}</StyledName>
             <StyledInfo>{props.country}</StyledInfo>
+            <StyledInfo>{props.searches}</StyledInfo>
         </Styled>
     );
 }
