@@ -37,8 +37,7 @@
   border-bottom: 1px solid rgb(221, 221, 221);
   display: flex;
   height: 70px;
-  justify-content: space-between;
-  padding: 0 3%;
+  justify-content: space-around;
   width: 100%;
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
@@ -48,4 +47,11 @@
 .dark-mode {
   color: #fff;
   background-color: #313843;
+}
+
+.PlayerCard{
+  width:400px;
+  margin:50px auto;
+  padding:20px;
+  border:1px solid grey;
 }
