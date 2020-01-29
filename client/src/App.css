@@ -44,3 +44,8 @@
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
 }
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}
