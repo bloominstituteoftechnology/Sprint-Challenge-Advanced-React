@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useLocalStorage } from './useLocalStorage';
 
-const useNameInStorage = () => {
+const UseNameInStorage = () => {
   const [userName, setUserName] = useLocalStorage('userName', '');
 
   return (
@@ -19,4 +19,4 @@ const useNameInStorage = () => {
   return [userName, setUserName];
 }
 
-export default useNameInStorage;
+export default UseNameInStorage;

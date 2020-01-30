@@ -1,11 +1,11 @@
 import React from 'react';
-import useNameInStorage from '../Hooks/useNameInStorage';
+import UseNameInStorage from '../Hooks/useNameInStorage';
 
 const Navbar = () => {
 
   return (
     <div>
-      <useNameInStorage />
+      <UseNameInStorage />
     </div>
   )
 }
