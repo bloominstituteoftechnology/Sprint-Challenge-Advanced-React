@@ -6,12 +6,12 @@
     "axios": "^0.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watchAll",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,7 +30,7 @@
     ]
   },
   "devDependencies": {
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "jest-dom": "^4.0.0",
     "react-testing-library": "^8.0.1"
   }
