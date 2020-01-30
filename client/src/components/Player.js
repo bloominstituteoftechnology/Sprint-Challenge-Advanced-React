@@ -10,7 +10,7 @@ export default class Player extends React.Component{
       }
     
     componentDidMount(){
-        axios.get("https://api.github.com/users/AesonJohnson/followers")
+        axios.get("http://localhost:5000/api/players")
         .then(response => {
           this.setState({
             players: response.data
@@ -26,11 +26,11 @@ export default class Player extends React.Component{
           <div>
             {this.state.players.map(player =>
               <PlayerCard
-                // name={player.name}
-                // country={player.country}
-                // searches={player.searches}
-                html_url={player.html_url}
-                login={player.login}
+                name={player.name}
+                country={player.country}
+                searches={player.searches}
+                // html_url={player.html_url}
+                // login={player.login}
               />
             )}
           </div>
