@@ -28,16 +28,28 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      dataComing: "alex"
+      women: []
     };
   }
   componentDidMount() {
-    axios.get("http://localhost:5000/api/players").then(resp => {
-      const data = resp.data;
+    axios.get("http://localhost:5000/api/players").then(dataComing => {
+      this.setState({ women: dataComing.data });
+      console.log(this.state.women);
     });
   }
   render() {
-    return <div>ssss{this.state.dataComing} </div>;
+    console.log(this.state.women);
+
+    return (
+      <div>
+        {this.state.women.map(woman => (
+          <div>
+            Name: {woman.name} <br />
+            Country: {woman.country}
+          </div>
+        ))}
+      </div>
+    );
   }
 }
 
