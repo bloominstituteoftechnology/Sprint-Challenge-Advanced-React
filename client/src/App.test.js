@@ -10,9 +10,8 @@ test('renders header', () => {
 
   const header = getByText(/soccer rocks/i);
 
-  expect(header).toBeInTheDocument();
   expect(header).toBeTruthy();
-  expect(header).not.toBeFalsy();
+  
 });
 
 
