@@ -29,6 +29,7 @@ class App extends Component {
   render () {
     return (
       <div className="container">
+        <h1>Soccer Rocks!</h1>
         <Nav />
         {this.state.players.map(player => (
           <PlayerCard
