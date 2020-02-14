@@ -44,9 +44,9 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by merging the branch back into master.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Add your Project Manager as a Reviewer on the Pull-request.
+- [X] PM then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
@@ -55,7 +55,7 @@ Your finished project must include all of the following requirements:
 - [X] Class component that fetches data from the server you now have running - the data can be fetched from `http://localhost:5000/api/players`
 - [X] Display the player data you receive from the API
 - [X] Build a custom hook and use it in your app - this can be a localStorage hook, a fetch hook, a dark mode hook, or any other hook you would like
-- [ ] Write a "reasonable" amount of unit tests for your React components. What does "reasonable amount" mean? That is up to you to decide. Be ready to defend your choice to your TL 👍
+- [X] Write a "reasonable" amount of unit tests for your React components. What does "reasonable amount" mean? That is up to you to decide. Be ready to defend your choice to your TL 👍
 
 ## Stretch Problems
 
