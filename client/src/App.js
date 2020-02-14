@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import PlayerCard from './components/PlayerCard';
 import DarkMode from './components/DarkMode';
-import TestAxios from './components/TestAxios'
+// import TestAxios from './components/TestAxios'
 
 class App extends Component {
 
@@ -34,7 +34,7 @@ class App extends Component {
         </header>
         <DarkMode />
         <PlayerCard data={this.state.data} />
-        <TestAxios url='https://jsonplaceholder.typicode.com/posts/1' />
+        {/* <TestAxios url='https://jsonplaceholder.typicode.com/posts/1' /> */}
       </div>
     );
   }
