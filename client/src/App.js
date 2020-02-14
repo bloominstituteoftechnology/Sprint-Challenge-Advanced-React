@@ -34,8 +34,8 @@ class App extends Component {
           <PlayerCard
           key={player.id}
           name={player.name}
-          rank={player.rank}
-          team={player.team}
+          country={player.country}
+         
           />
         ))
         };
