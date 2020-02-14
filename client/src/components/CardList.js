@@ -23,7 +23,7 @@ class CardList extends React.Component {
         console.log(this.state.data)
     }
       render() {
-          return ( <Grid container>
+          return ( <Grid container spacing={3}  justify='center'>
               {this.state.data.map((item) => {
                 return (<Grid item>
                   <PlayerCard name={item.name} country={item.country} searches={item.searches}/>

@@ -15,7 +15,7 @@ export default function App() {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <CSSBaseline />
-   <Container maxWidth='md'>
+   <Container maxWidth='md' style={{margin: '0 auto'}}>
     <CardList/>
    </Container>
    </ThemeProvider>
