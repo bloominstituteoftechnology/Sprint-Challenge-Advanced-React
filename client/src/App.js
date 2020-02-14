@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
+
+import Container from '@material-ui/core/Container';
+import {ThemeProvider} from '@material-ui/core/styles';
+import CSSBaseline from '@material-ui/core/CssBaseline';
+import {lightTheme, darkTheme} from './themes';
+
+
+
+export default function App() {
+  const [data, setData] = useState([])
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <CSSBaseline />
+   <Container maxWidth='md'></Container>
+   </ThemeProvider>
+  )
 }
-
-export default App;
