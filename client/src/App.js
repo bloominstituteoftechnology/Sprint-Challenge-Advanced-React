@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('   ')
+    axios.get('http://localhost:5000/api/players')
     .then(res => {
       console.log('players', res.data);
       this.setState({players: res.data})
