@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as rt1 from '@testing-library/react'
-import { render } from '@testing-library/react';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -19,6 +18,8 @@ test('Title displayed', () => {
   const { getByTestId } = rt1.render(<App />);
   getByTestId(/title/i)
 })
+
+
 
 test("displays toggle function", () => {
   const { getByTestId } = rt1.render(<App />);
