@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import Players from './components/Players';
+import { usePlayers } from './components/api';
+
+
 import './App.css';
 
-function App() {
+function App(props) {
+  const[player, setPlayer] = useLocalStorage('player', 'country');
+  const[search, setSearch] = useLocalStorage('search', 1);
+  const [players, setPlayers] = usePlayers();
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Women's World Cup - 2019 </h1>
+
+      <select value={player} onChange={e => setPlayer(e.target.value)}> 
+        <option value="name">Name</option>
+        <option value="country">Country</option>
+        <option value="searches">Amount of Searches</option>
+      </select>
+
+      <input
+      type='number' placeholder='Search Count' value={search} onChange={e => setSearch(e.target.value)} />
+
+      <div>
+        {players.map((player, index) => (
+          <Players player={player} key={index} />
+        ))}
+      </div>
+      </>
   );
 }
 
