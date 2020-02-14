@@ -18,7 +18,7 @@ import CardList from './components/CardList';
 import { useDarkMode } from './hooks/useDarkMode';
 
 export default function App() {
-  const [isDarkTheme, setIsDarkTheme] = useDarkMode(false);
+  const [isDarkTheme, setIsDarkTheme] = useDarkMode('isDarkMode', false);
   const theme = useTheme();
   
   return (
