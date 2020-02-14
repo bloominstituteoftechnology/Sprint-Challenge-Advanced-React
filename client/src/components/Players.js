@@ -1,21 +1,21 @@
 import React from 'react';
 
-class Players extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            team: []
-        };
-    }
+function Players(props){
 
-    render() {
+    
         return (
             <div>
-                {console.log('test', this.state)}
-                <h2>{this.props.playersData.name}</h2>
+               
+                {props.playersData.map(player => (
+                    <div key={player.id}>
+                        <h2>{player.name}</h2>
+                        <h3>{player.country}</h3>
+                        <p>{player.searches}</p>
+                  </div>
+                ))}
             </div>
         )
     }
-}
+
 
 export default Players;
