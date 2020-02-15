@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-import "./App.css";
-
 // function App() {
 //   return (
 //     <div className="App">
@@ -24,7 +22,7 @@ import "./App.css";
 //   );
 // }
 
-class App extends React.Component {
+class DataRendering extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -41,16 +39,18 @@ class App extends React.Component {
     console.log(this.state.women);
 
     return (
-      <div>
-        {this.state.women.map(woman => (
-          <div>
-            Name: {woman.name} <br />
-            Country: {woman.country}
-          </div>
-        ))}
-      </div>
+      <>
+        <div>
+          {this.state.women.map(woman => (
+            <div>
+              Name: {woman.name} <br />
+              Country: {woman.country}
+            </div>
+          ))}
+        </div>
+      </>
     );
   }
 }
 
-export default App;
+export default DataRendering;
