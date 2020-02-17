@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "../style.scss";
 // function App() {
 //   return (
 //     <div className="App">
@@ -22,7 +22,7 @@ import axios from "axios";
 //   );
 // }
 
-class DataRendering extends React.Component {
+export default class DataRendering extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -42,9 +42,10 @@ class DataRendering extends React.Component {
       <>
         <div>
           {this.state.women.map(woman => (
-            <div>
-              Name: {woman.name} <br />
-              Country: {woman.country}
+            <div className='datarennderdiv'>
+              <div> Name: {woman.name} </div>
+
+              <div> Country: {woman.country}</div>
             </div>
           ))}
         </div>
@@ -53,4 +54,4 @@ class DataRendering extends React.Component {
   }
 }
 
-export default DataRendering;
+//

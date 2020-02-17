@@ -4,7 +4,6 @@ import Navbar from "./components/nav";
 import useDarkMode from "./hooks/useDarkMode";
 import DataRendering from "./components/dataRendering";
 import useLocalStorage from "./hooks/useLocalStorage.js";
-
 import "./style.scss";
 
 function App() {

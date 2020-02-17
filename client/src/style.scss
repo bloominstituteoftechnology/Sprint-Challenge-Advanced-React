@@ -223,29 +223,19 @@ img {
   width: 100%;
 }
 
-.chart-header {
+.datarennderdiv {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 16px;
-}
+  flex-direction: row;
+  max-width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 5px white solid;
 
-.coin__title {
-  display: block;
-  margin-left: 8px;
-  min-width: 160px;
-  text-align: left;
-}
-
-.coin__symbol {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.coin__logo {
-  width: 50px;
+  overflow: hidden;
 }
 
 .dark-mode {

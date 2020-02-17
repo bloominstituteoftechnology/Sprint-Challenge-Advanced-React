@@ -11,7 +11,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "styled-components": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
