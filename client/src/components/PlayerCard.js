@@ -1,16 +1,17 @@
 import React from "react";
 
 const playerCard = props => {
-    let data = props
   return (
-    <div>
-      {data.data.map((el, index) => {
+    <div className="playerCard_container">
+      {props.data.map((el, index) => {
+        console.log(el);
+
         return (
-          <div key={index}>
-            <div>
-              <h2>Name: {el.name}</h2>
-              <h3>Country: {el.country}</h3>
-              <h3>Searches: {el.searches}</h3>
+          <div  key={index} className="playerCard">
+            <div className="textcontent">
+              <h2> Name: {el.name}</h2>
+              <h3> Country: {el.country}</h3>
+              <h3> Searches: {el.searches}</h3>
             </div>
           </div>
         );

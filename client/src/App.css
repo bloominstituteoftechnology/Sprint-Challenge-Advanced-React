@@ -31,3 +31,86 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #FFA08A;
+}
+
+.App-header {
+  background-color:#FF403D;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vmin;
+  color: white;
+}
+
+.dark-mode__toggle {
+  background: white;
+  border-radius: 50px;
+  border: 3px solid dar;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: hotpink;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+  box-shadow: 0 0 10px 5px #FF403D;
+
+}
+
+.toggled {
+  left: 17px;
+}
+
+.playerCard_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  margin: 1vh;
+  box-shadow: 5px 5px 10px;
+}
+
+.playerCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vmin;
+  width: 40%;
+  height: 10%;
+  background-color: #FFE6D8;
+  color: #7A0B2F;
+  margin: 1vh;
+  box-shadow: 0 0 8px 5px #FF403D;
+
+}
+
+.dark-mode .playerCard{
+  color: #FFE6D8;
+  background-color: #7A0B2F;
+
+  }
+
+  .navbar {
+    background-color: black;
+    border: none;
+    box-shadow: 0 0 10px 5px #FF403D;
+
+}
