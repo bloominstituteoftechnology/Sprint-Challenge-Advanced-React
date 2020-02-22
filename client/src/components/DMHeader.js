@@ -1,21 +1,23 @@
 import React from 'react';
-import {useDarkMode} from "../hooks/useDarkMode"
+import useDarkMode from "../hooks/useDarkMode"
 
 
 const Nav = () => {
-    const [Dark, setDark] = useDarkMode(false);
+    const [darkMode, setDarkMode] = useDarkMode(false);
     const toggleMode = e => {
         e.preventDefault();
-        setDark(!Dark);
+        setDarkMode(!darkMode);
     };
     return (
-        <nav>
+        <nav className="nav">
             <h1>Women's World Cup Player List</h1>
+            <div className="dark-mode__toggle">
             <div data-testid="toggle"
             onClick={toggleMode}
-            className={Dark ? "toggle toggled" : "toggle"}
+            className={darkMode ? "toggle toggled" : "toggle"}
             />
+            </div>
         </nav>
     )
 }
-export default Nav
+export default Nav;

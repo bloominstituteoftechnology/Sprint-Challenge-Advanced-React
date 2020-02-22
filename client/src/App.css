@@ -31,3 +31,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav {
+  background-color: #29C9cc;
+}
+
+.dark-mode__toggle {
+  background-color: #009E1A;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}

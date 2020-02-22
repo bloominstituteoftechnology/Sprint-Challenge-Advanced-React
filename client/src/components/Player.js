@@ -1,14 +1,13 @@
 import React from 'react'
 
-class Player extends React.Component {
-    render(props) {
+const Player = props => {
         return (
             <div>
-                <h3>{this.props.name}</h3>
-                <h4>{this.props.country}</h4>
+                <h3>{props.name}</h3>
+                <h4>Country: {props.country}</h4>
             </div>
         )
     }
-}
+
 
 export default Player;

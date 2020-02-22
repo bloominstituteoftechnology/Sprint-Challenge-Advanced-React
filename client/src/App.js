@@ -2,7 +2,7 @@ import React from 'react';
 import DMHeader from "./components/DMHeader";
 import SearchForm from "./components/SearchForm";
 import PlayerList from "./components/PlayerList";
-import Axios from "axios;"
+import axios from "axios";
 
 import './App.css';
 
@@ -19,7 +19,7 @@ class App extends React.Component {
 componentDidMount() {
   console.log("Mount Works!");
 
-  Axios
+  axios
   .get("https://localhost:5000/api/players")
   .then(res => {
     console.log(res.data);
@@ -36,11 +36,7 @@ componentDidMount() {
   return (
     <div className="App">
       <DMHeader />
-      <SearchForm 
-      data={this.state.data}
-      name={this.state.name}
-      country={this.state.country}
-      />
+
       <PlayerList
       data={this.state.data}
       name={this.state.name}
