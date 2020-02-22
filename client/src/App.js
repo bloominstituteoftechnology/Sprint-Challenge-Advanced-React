@@ -1,17 +1,18 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
+import PlayerCard from "./components/PlayerCard";
 
-class App extends React.Component() {
+class App extends React.Component{
   constructor() {
-    super(
-      (this.state = {
+    super()
+      this.state = {
         data: []
-      })
-    );
+      }
+    
   }
 
-  
+
   componentDidMount() {
     axios
       .get("http://localhost:5000/api/players")
@@ -26,7 +27,7 @@ class App extends React.Component() {
   render() {
     return (
       <div>
-        <h1>App</h1>
+        <PlayerCard data={this.state.data} />
       </div>
     );
   }
