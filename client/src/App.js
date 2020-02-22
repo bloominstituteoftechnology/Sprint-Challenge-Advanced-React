@@ -36,8 +36,16 @@ componentDidMount() {
   return (
     <div className="App">
       <DMHeader />
-      <SearchForm />
-      <PlayerList />
+      <SearchForm 
+      data={this.state.data}
+      name={this.state.name}
+      country={this.state.country}
+      />
+      <PlayerList
+      data={this.state.data}
+      name={this.state.name}
+      country={this.state.country}
+       />
     </div>
 
   );
