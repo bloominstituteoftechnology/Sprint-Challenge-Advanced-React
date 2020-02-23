@@ -4,9 +4,12 @@ import axios from 'axios';
 import './App.css';
 
 class App extends React.Component {
-  state = {
-    players:[]
+  constructor() {
+    super ();
+    this.state ={
+    players:[],
   }
+}
   componentDidMount() {
     axios
     .get('http://localhost:5000/api/players')
@@ -20,6 +23,10 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        <Navigation />
+        {this.state.players.map (player => (
+          <PlayerList key={player.id} name={player.name} country={player.country} />
+        ))}
 
       </div>
     );
