@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Navigation from './components/Navigation';
+import PlayerList from './components/PlayerList';
 
 import './App.css';
 
@@ -22,7 +24,7 @@ class App extends React.Component {
   }
   render(){
     return (
-      <div>
+      <div className="App">
         <Navigation />
         {this.state.players.map (player => (
           <PlayerList key={player.id} name={player.name} country={player.country} />
