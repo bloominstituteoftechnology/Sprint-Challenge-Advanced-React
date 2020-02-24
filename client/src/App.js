@@ -14,13 +14,12 @@ class App extends React.Component {
 }
   componentDidMount() {
     axios
-    .get('https://localhost:5000/api/players')
-    .then(res => {
-      console.log("data", res)
-      this.setState({players: res.data})
+    .get('http://localhost:5000/api/players')
+    .then(response => {
+      console.log("data", response)
+      this.setState({players: response.data})
     })
-    .catch (err => {console.log("No data", err)
-  })
+    .catch (err => console.log(err));
   }
   render(){
     return (
