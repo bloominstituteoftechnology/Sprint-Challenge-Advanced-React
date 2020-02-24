@@ -14,37 +14,6 @@
   width: 30vw;
   height: 30vh;
   justify-content: center;
-<<<<<<< HEAD
   align-items: center;
   border: 1px dotted darkturquoise;
-=======
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.nav {
-  background-color: #29C9cc;
-}
-
-.dark-mode__toggle {
-  background-color: #009E1A;
-  border: 1px solid black;
-  height: 20px;
-  position: relative;
-  width: 40px;
->>>>>>> 0c5cbbd7c134c64ba074c7ca833b658cf31b2cc6
 }
