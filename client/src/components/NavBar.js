@@ -2,10 +2,10 @@ import React from 'react';
 import useDarkMode from './UseDarkMode'
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useDarkMode();
+  const [darkMode, setDarkMode] = useDarkMode(false);
   const toggleMode = e => {
     e.preventDefault();
-    setDarkMode(darkMode !== 'dark' ? 'dark':'standard');
+    setDarkMode(!darkMode);
   };
   return (
     <nav className="navbar">
