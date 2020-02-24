@@ -17,3 +17,13 @@
   align-items: center;
   border: 1px dotted darkturquoise;
 }
+
+.dark-mark__toggle {
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.toggle {
+  background: orangered;
+  border-radius: 50px;
+}
