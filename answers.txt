@@ -1,0 +1,18 @@
+
+_Questions_
+
+Why would you use class component over function components (removing hooks from the question)?
+	Class components can use lifecycle hooks, such as render()
+
+Name three lifecycle methods and their purposes.
+	componentDidMount() - waits to render UI until the state is updated
+	componentDidUpdate() - updates when the DOM changes
+	componentWillUnmount() - called right before the component is unmounted and destroyed, cleanup actions would go here
+
+What is the purpose of a custom hook?
+	Pull logic out of files. Allows you to use reusable useComponents, like useForm
+
+Why is it important to test our apps?
+	You can code what the functionality of the app is, so if anyone needs to change anything,
+	they'll know if their changes will effect the functionality of the app
+

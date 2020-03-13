@@ -1,0 +1,27 @@
+div{
+
+	.playerCard{
+		width: 90vw;
+		margin: 0px auto;
+
+		.unit{
+			display: flex;
+			justify-content: space-around;
+
+			&:hover{
+				background-color: rgba(0,0,0,0.1);
+			}
+
+			.box{
+				border-top: 1px grey solid;
+				border-bottom: 1px black dotted;
+				width: 440px;
+				padding: 15px 0px;
+
+			}
+
+
+
+		}//unit
+	}//playerCard
+}//div
