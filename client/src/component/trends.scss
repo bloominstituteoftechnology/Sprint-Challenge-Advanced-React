@@ -1,27 +1,15 @@
-div{
+.playersContainer{
+	text-align: center;
 
-	.playerCard{
-		width: 90vw;
-		margin: 0px auto;
+	.playerRow{
+		display: flex;
+		flex-wrap: wrap;
 
-		.unit{
-			display: flex;
-			justify-content: space-around;
+		div{
+			border: 1px grey solid;
+			width: 22%;
+			margin: 10px auto;
 
-			&:hover{
-				background-color: rgba(0,0,0,0.1);
-			}
-
-			.box{
-				border-top: 1px grey solid;
-				border-bottom: 1px black dotted;
-				width: 440px;
-				padding: 15px 0px;
-
-			}
-
-
-
-		}//unit
-	}//playerCard
-}//div
+		}//div
+	}//playerRow
+}//playersContainer

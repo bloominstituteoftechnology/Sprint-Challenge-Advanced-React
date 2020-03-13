@@ -10,7 +10,8 @@
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "testing-library": "0.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

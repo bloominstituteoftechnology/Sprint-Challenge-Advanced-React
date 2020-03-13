@@ -1,39 +1,43 @@
-import React from 'react';
-import axios from 'axios';
-import PlayerCard from './PlayerCard';
-
+import React from "react";
+import axios from "axios";
 import './trends.scss';
 
-const url1 = "http://localhost:5000/api/players";
-
 class Trends extends React.Component {
-	// State
-	constructor(){
-		super();
-		this.state = { players: [] };
+
+	state = {
+		players: []
 	};
 
-	// API Get data
-	componentDidMount(){
-		axios.get(url1).then(res => {
-			this.setState({
-				players:res.data
-			})
-			//console.log("State ~ ", this.state);
+	componentDidMount() {
+		axios
+		.get("http://localhost:5000/api/players")
+		.then(res => {		
+			this.setState({ 
+				players: res.data 
+			});
 		})
-		.catch(err =>{
-			console.log(err);
-		})
+		.catch(err => console.log("API error ~ ", err));
 	}
 
-	render(){		
+	render() {
 		return (
-			<div>
-				<PlayerCard data={this.state} />
+			<div className="playersContainer">
+				<h3>Trends of players</h3>
+
+				<div className="playerRow">
+					{this.state.players.map(player => (
+						<div key={player.id}>
+							<h2>{player.searches}</h2>
+							<p>{player.name}</p>
+							<p>{player.country}</p>
+						</div>
+					))}
+				</div>
+
 			</div>
 		);
 	}
-
+	
 }
 
-export default Trends
+export default Trends;
