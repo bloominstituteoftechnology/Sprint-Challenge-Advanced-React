@@ -1,4 +1,11 @@
 import React from 'react'
+import styled from 'styled-components';
+
+const Back = styled.div`
+background-color: pink;`
+const Text = styled.p`
+color: white;
+font-size: 24px;`
 
 
 function PlayersCard (props){
@@ -6,12 +13,13 @@ function PlayersCard (props){
     return (
         <>
         {Object.keys(players).map((item, i) => (
-            <div key={i}>
-                {players[item].name}
-                <br/>
-                Country of Orgin: {players[item].country}
+            <Back key={i}>
+               <Text> {players[item].name}</Text>
+              <Text>  Country: {players[item].country}</Text>
+              <Text>Searches: {players[item].searches}</Text>
+              <br></br>
                
-            </div>
+            </Back>
         ))}
         </>
     )
