@@ -3,6 +3,7 @@ import axios from 'axios';
 import PlayCard from './PlayCard';
 
 
+
 class Players extends React.Component {
     state= {
         players: []
@@ -25,7 +26,7 @@ class Players extends React.Component {
         return(
             players.map(player =>{
                 const {id} = player;
-                return (
+                return(
                     <PlayCard key= {id} user={player}/>
                 )
             })
@@ -33,4 +34,4 @@ class Players extends React.Component {
     }
 }
 
-export default Players; 
+export default Players;
