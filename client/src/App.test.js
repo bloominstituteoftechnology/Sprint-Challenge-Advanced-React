@@ -17,7 +17,6 @@ test(`renders without crashing`, () => {
 test(`Displays Nav`,()=>{
 const nav = render(<Nav/>);
 nav.getByText("Womens Soccer Team");
-
 nav.getByText('Dark');
 
 });
