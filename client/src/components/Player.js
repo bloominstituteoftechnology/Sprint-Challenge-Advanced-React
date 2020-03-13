@@ -3,7 +3,7 @@ import React from 'react';
     const Player = (props) => {
         return (
         <div>
-            <p>{props.name} : {props.country}</p>
+            <p data-testid="player-display" className="player-info">{props.name} : {props.country}</p>
         </div>
     )
 }

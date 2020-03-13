@@ -13,7 +13,8 @@ const Navbar = () => {
     <nav className="navbar">
         <div className="headerToggle">
             <div className="dark-mode-toggle">
-                <button id="dark-mode" type="button"
+                {/* //go back and check it */}
+                <button data-testid="dark-mode" type="button"
                 onClick={toggleMode}
                 className={darkMode ? 'toggle toggled' : 'toggle'} />
             </div>

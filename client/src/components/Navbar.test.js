@@ -4,12 +4,21 @@ import { render, fireEvent , queryByAttribute} from "@testing-library/react";
 import App from "../App";
 import Navbar from "./Navbar";
 
-const getById = queryByAttribute.bind(null, 'id');
+//const getById = queryByAttribute.bind(null, 'id');
+
 
 test("render with dark mode default", ()=> {
-    const darkmodeBtn = getById("dark-mode");
-    fireEvent.Click(darkmodeBtn);
+    //go back and check it out
+    const {getByTestId } = render(<Navbar />);
 
-    const body = getById("body");
-    expect(body).toHaveStyle("background-color: black");
+    const darkmodeBtn = getByTestId("dark-mode");
+    fireEvent.click(darkmodeBtn);
+
+    const body = document.querySelector("body");
+    expect([...body.classList].includes("dark-mode")).toBe(true);
+    // fireEvent.click(darkmodeBtn)
+    //  expect(getByTestId(body)).toHaveStyle('background-color: black')
+    //                                      ^
+    //    fireEvent.click(darkmodeBtn)
+    //   expect(getByTestId(body)).toHaveStyle('background-color: white')
 })
