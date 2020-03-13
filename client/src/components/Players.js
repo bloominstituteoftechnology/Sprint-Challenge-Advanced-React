@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Player from './Player';
 
 class Players extends React.Component {
     state = {
@@ -21,6 +22,7 @@ class Players extends React.Component {
         return(
             <div>
                 hello
+                <Player></Player>
             </div>
         )
     }
