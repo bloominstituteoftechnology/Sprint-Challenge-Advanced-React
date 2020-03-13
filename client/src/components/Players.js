@@ -9,7 +9,7 @@ class Players extends React.Component {
 
     componentDidMount() {
         axios
-        .get('https://googletrends.github.io/data/')
+        .get('http://localhost:5000/api/players')
         .then(res => {
             this.setState({
                 players: res.data
@@ -21,8 +21,13 @@ class Players extends React.Component {
     render() {
         return(
             <div>
-                hello
-                <Player></Player>
+                {this.state.players.map(p => 
+                    <Player
+                        key={p}
+                        name={p.name}
+                        country={p.country} />  
+                )}
+                
             </div>
         )
     }
