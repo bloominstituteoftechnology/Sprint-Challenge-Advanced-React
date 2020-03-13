@@ -23,9 +23,21 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+        assuming hooks are not involded, class component brings functionality that we normally didn’t get with the React API when using function components. 
+
 - [ ] Name three lifecycle methods and their purposes.
+
+        Mount:component is being built out from the ground up, Your render method is invoked and componentDidMount gets called as well
+
+        Update: updating component data, setState can be used to change the component’s state data, forcing a call to render.
+
+        Unmount:Component is removed from the screen, componentWillUnmount is called and can be used for any clean up you may need to do.
+
 - [ ] What is the purpose of a custom hook?
+        we compose hooks in a custom hook to extend multiple pieces of stateful logic.
+
 - [ ] Why is it important to test our apps?
+        We write tests to give us confidence in the code we are shipping to production.
 
 ## Project Set Up
 
