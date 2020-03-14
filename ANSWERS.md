@@ -7,9 +7,9 @@ Answer for 1:
 A class can have a state in the component, but a function component without hooks can’t. For example this Sprint. There is a componentDidMount function componenet inside the Players class.
 
 Answer for 2:
-Mounting – Birth of your component
-Update – Growth of your component
-Unmount – Death of your component
+componentDidMount – Birth of your component, fetching data
+componentDidUpdate – Growth of your component, keep updating
+componentWillUnmount – Death of your component, for cleaning up
 
 Answer for 3:
 Custom Hooks are reuseable stateful logic 
