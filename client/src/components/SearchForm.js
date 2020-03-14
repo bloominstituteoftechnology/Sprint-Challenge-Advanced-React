@@ -1,23 +1,25 @@
 import React from 'react';
 
-const SearchForm = propos => {
+const SearchForm = props => {
     const onSearchChanged = event => {
-        propos.setSearchText(event.target.value);
+        props.setSearchText(event.target.value);
     };
 
     return (
-        <Section className="search-form">
+        <div className="search-form">
             <form>
                 <input
                 id="search"
                 name="textfield"
                 placeholder="Search"
                 onChange={onSearchChanged}
-                value={propos.setSearchText}
+                value={props.searchText}
 
                 />
             </form>
 
-        </Section>
+        </div>
     )
 }
+
+export default SearchForm;
