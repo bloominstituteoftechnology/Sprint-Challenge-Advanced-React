@@ -34,7 +34,7 @@ const Chart = props => {
   }
 
   return (
-    <BarChart width={730} height={250} data={data}>
+    <BarChart width={730} height={250} data={data} style={{ marginTop: 20}}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey={xAxisDataKey} tick={<CustomizedAxisTick />} />
       <YAxis />

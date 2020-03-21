@@ -35,7 +35,7 @@ class App extends React.Component {
     console.log(this.playerCountByCountries())
     console.log(this.playerCountByCountries())
     return (
-      <div className="App">
+      <div className="App" >
         <Header />
         <Chart data={this.playerCountByCountries()} xAxisDataKey="country" barDataKey="count"  />
         {this.state.players.map((player) => <PlayerCard key={player.id} {...player} />)}
