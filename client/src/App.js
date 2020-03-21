@@ -1,58 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import useColors from './hooks/useColors';
-// import axios from 'axios';
+import axios from 'axios';
 
-class App extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			players: [],
-			searchInput: ''
-		};
-	}
+const App = () => {
+	const [players, setPlayers] = useState([]);
+	const [searchInput, setSearchInput] = useState('');
 
-	fetchPlayers = () => {
-		fetch('http://localhost:5000/api/players')
-			.then(res => res.json())
-			.then(data => {
-				this.setState({ players: data });
-			})
+	const fetchPlayers = () => {
+		axios
+			.get('http://localhost:5000/api/players')
+			.then(res => setPlayers(res.data))
 			.catch(err => console.error(err));
 	};
 
-	componentDidMount() {
-		this.fetchPlayers();
-	}
+	useEffect(() => {
+		fetchPlayers();
+	}, []);
 
-	handleChange = e => {
-		this.setState({ searchInput: e.target.value });
+	const handleChange = e => {
+		setSearchInput(e.target.value);
+		console.log(searchInput);
 	};
 
-	handleSearch = e => {
+	const handleSearch = e => {
 		e.preventDefault();
-		let searchResult = this.state.players.filter(
-			player => player['name'].indexOf(this.state.searchInput) >= 0
+		let searchResult = players.filter(
+			player => player['name'].indexOf(searchInput) >= 0
 		);
 
+		console.log(searchResult);
+
 		if (searchResult.length > 0) {
-			this.setState({
+			setPlayers({
 				players: searchResult
 			});
 		}
 	};
 
-	render() {
-		return (
-			<div>
-				<h1>List of players</h1>
-				<form onSubmit={this.handleSearch}>
-					<input type="text" onChange={this.handleChange} placeholder="Search..." />
-					<button>Search</button>
-					<input type="checkbox"></input>
-				</form>
-				<ul>
-					{this.state.players.map(player => (
+	const [color, setColor] = useColors(false);
+	const toggleMode = e => {
+		e.preventDefault();
+		setColor(!color);
+	};
+
+	return (
+		<div>
+			<h1>List of players</h1>
+			<form onSubmit={handleSearch} data-testid="form">
+				<input
+					type="text"
+					onChange={handleChange}
+					placeholder="Search..."
+					// value={newTeamMember.name}
+				/>
+				<button>Search</button>
+				<input type="checkbox" onClick={toggleMode} data-testid="toggle" />
+			</form>
+			<ul data-testid="list-of-players">
+				{players.length > 0 ? (
+					players.map(player => (
 						<li key={player.id}>
 							<p>
 								<span>Name:</span> {player.name}
@@ -61,11 +68,13 @@ class App extends React.Component {
 								<span>Country:</span> {player.country}
 							</p>
 						</li>
-					))}
-				</ul>
-			</div>
-		);
-	}
-}
+					))
+				) : (
+					<p>Loading data...</p>
+				)}
+			</ul>
+		</div>
+	);
+};
 
 export default App;
