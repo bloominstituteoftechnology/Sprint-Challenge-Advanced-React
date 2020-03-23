@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+.players {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.player {
+	width: 100%;
+	max-width: 33%;
+	flex-basis: 33%;
+}
