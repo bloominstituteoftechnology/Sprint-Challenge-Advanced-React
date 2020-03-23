@@ -13,4 +13,4 @@ import { useState } from 'react';
 
   return [value, setValue];
 }
-export default useLocalStorage
+export default useLocalStorage;

@@ -13,12 +13,11 @@ export default function SignupForm() {
     <div p={2} className="form">
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Whos your favorite Player?</legend>
+          <legend>Who is your favorite Player?</legend>
           <input
           type='text'
             id="outlined-name"
             label="Username"
-            placeholder='favoritPlayer'
             name="username"
             value={values.username}
             onChange={changeHandler}

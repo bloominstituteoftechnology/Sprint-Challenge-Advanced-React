@@ -2,7 +2,7 @@ import React from "react";
 import useDarkMode from "./Darkmode.js";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useDarkMode('darkMode', false);
+  const [darkMode, setDarkMode] = useDarkMode(false);
 
   const toggleMode = e => {
     e.preventDefault();
@@ -10,7 +10,7 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
-    <h1>world cup players!</h1>
+    <h1>World Cup Players</h1>
     <div className="dark-mode__toggle">
       <div
         onClick={toggleMode}
