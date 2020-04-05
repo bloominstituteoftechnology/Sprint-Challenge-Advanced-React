@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import useLocalStorage from './useLocalStorage';
 
-const useUseColors = initialValue => {
-	const [value, setValue] = useState(initialValue);
+const useUseColors = (key, initialValue) => {
+	const [value, setValue] = useLocalStorage(key, initialValue);
 
 	useEffect(() => {
 		value

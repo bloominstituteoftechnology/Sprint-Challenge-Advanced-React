@@ -5,44 +5,52 @@ import axios from 'axios';
 
 const App = () => {
 	const [players, setPlayers] = useState([]);
-	const [searchInput, setSearchInput] = useState('');
-
-	const fetchPlayers = () => {
-		axios
-			.get('http://localhost:5000/api/players')
-			.then(res => setPlayers(res.data))
-			.catch(err => console.error(err));
-	};
+	const [searchTerm, setSearchTerm] = useState('');
+	const [searchResult, setSearchResult] = useState([]);
 
 	useEffect(() => {
-		fetchPlayers();
+		const fetchData = async () => {
+			const result = await axios('http://localhost:5000/api/players');
+			setPlayers(result.data);
+		};
+		fetchData();
 	}, []);
 
-	const handleChange = e => {
-		setSearchInput(e.target.value);
-		console.log(searchInput);
+	const handleChange = (e) => {
+		setSearchTerm(e.target.value);
+		console.log(e.target.value);
 	};
 
-	const handleSearch = e => {
+	const handleSearch = (e) => {
 		e.preventDefault();
-		let searchResult = players.filter(
-			player => player['name'].indexOf(searchInput) >= 0
+		const playerCopy = [...players];
+
+		const searchResult = playerCopy.filter((player) =>
+			player.name.toLowerCase().includes(searchTerm.toLowerCase())
 		);
 
-		console.log(searchResult);
+		setSearchResult(searchResult);
 
-		if (searchResult.length > 0) {
-			setPlayers({
-				players: searchResult
-			});
-		}
+		setSearchTerm('');
 	};
 
 	const [color, setColor] = useColors(false);
-	const toggleMode = e => {
+	const toggleMode = (e) => {
 		e.preventDefault();
 		setColor(!color);
 	};
+
+	function filterByCountry(value) {
+		let country = value;
+		const searchResult = players.filter((player) =>
+			player.country.includes(country)
+		);
+		setSearchResult(searchResult);
+	}
+
+	function clearFilterByCountry() {
+		setSearchResult([]);
+	}
 
 	return (
 		<div>
@@ -51,27 +59,41 @@ const App = () => {
 				<input
 					type="text"
 					onChange={handleChange}
-					placeholder="Search..."
-					// value={newTeamMember.name}
+					placeholder="Type name..."
+					value={searchTerm}
 				/>
 				<button>Search</button>
-				<input type="checkbox" onClick={toggleMode} data-testid="toggle" />
+				<button onClick={clearFilterByCountry}>Clear</button>
+				<label>
+					Toggle color
+					<input type="checkbox" onClick={toggleMode} data-testid="toggle" />
+				</label>
 			</form>
+			<p></p>
 			<ul data-testid="list-of-players">
-				{players.length > 0 ? (
-					players.map(player => (
-						<li key={player.id}>
-							<p>
-								<span>Name:</span> {player.name}
-							</p>
-							<p>
-								<span>Country:</span> {player.country}
-							</p>
-						</li>
-					))
-				) : (
-					<p>Loading data...</p>
-				)}
+				{searchResult.length > 0
+					? searchResult.map((player) => (
+							<li key={player.id}>
+								<p>{player.name}</p>
+								<button
+									className="hashtag"
+									onClick={() => filterByCountry(player.country)}
+								>
+									#{player.country.toLowerCase()}
+								</button>
+							</li>
+					  ))
+					: players.map((player) => (
+							<li key={player.id}>
+								<p>{player.name}</p>
+								<button
+									className="hashtag"
+									onClick={() => filterByCountry(player.country)}
+								>
+									#{player.country.toLowerCase()}
+								</button>
+							</li>
+					  ))}
 			</ul>
 		</div>
 	);

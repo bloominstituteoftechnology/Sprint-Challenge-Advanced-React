@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 h1 {
 	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	padding: 2rem;
+	letter-spacing: 1px;
 }
 
 ul {
+	width: 80%;
+	margin: 2rem auto;
 	list-style: none;
 	padding: 0;
 	display: flex;
@@ -11,29 +30,35 @@ ul {
 }
 
 li {
+	border-top: 2px solid red;
+	font-size: 1.6rem;
 	background: white;
-	width: 200px;
-	margin: 10px;
-	padding: 10px;
+	margin: 1rem;
+	padding: 0 2rem 1rem;
 	border-radius: 5px;
-	box-shadow: 1px -1px 5px 0px rgba(0, 0, 0, 0.75);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-
-span {
-	font-weight: bold;
-}
-
 form {
 	width: 50%;
+
 	margin: 0 auto;
-	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 input {
-	border: 1px solid gainsboro;
+	border: none;
 	padding: 5px;
-	border-radius: 5px;
-	width: 150px;
+	width: 250px;
+	border-bottom: 1px solid green;
+}
+
+label {
+	padding: 1rem;
 }
 
 button {
@@ -41,8 +66,28 @@ button {
 	padding: 5px;
 	border-radius: 5px;
 	margin-left: 10px;
+	cursor: pointer;
+}
+
+input:focus,
+button:focus {
+	outline: none;
+}
+
+.hashtag {
+	text-align: center;
+	display: inline-block;
+	font-size: 0.9rem;
+	text-decoration: none;
+	background-color: #e2e8f0;
+	color: inherit;
+	border-radius: 10px;
+	border: none;
+	min-width: 100px;
+	margin-left: 0;
+	cursor: pointer;
 }
 
 .colors {
-	background-color: lightpink;
+	background-color: #e2e8f0;
 }
