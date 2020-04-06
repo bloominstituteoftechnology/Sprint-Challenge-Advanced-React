@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import useColors from './hooks/useColors';
 import axios from 'axios';
+import Header from './Header';
+import ListWrapper from './ListWrapper';
 
 const App = () => {
 	const [players, setPlayers] = useState([]);
@@ -18,11 +20,11 @@ const App = () => {
 
 	const handleChange = (e) => {
 		setSearchTerm(e.target.value);
-		console.log(e.target.value);
 	};
 
 	const handleSearch = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 		const playerCopy = [...players];
 
 		const searchResult = playerCopy.filter((player) =>
@@ -30,71 +32,42 @@ const App = () => {
 		);
 
 		setSearchResult(searchResult);
-
 		setSearchTerm('');
 	};
 
 	const [color, setColor] = useColors(false);
+
 	const toggleMode = (e) => {
 		e.preventDefault();
 		setColor(!color);
 	};
 
 	function filterByCountry(value) {
-		let country = value;
 		const searchResult = players.filter((player) =>
-			player.country.includes(country)
+			player.country.includes(value)
 		);
 		setSearchResult(searchResult);
 	}
 
-	function clearFilterByCountry() {
+	function clearFilterByCountry(e) {
+		e.stopPropagation();
 		setSearchResult([]);
 	}
 
 	return (
 		<div>
-			<h1>List of players</h1>
-			<form onSubmit={handleSearch} data-testid="form">
-				<input
-					type="text"
-					onChange={handleChange}
-					placeholder="Type name..."
-					value={searchTerm}
-				/>
-				<button>Search</button>
-				<button onClick={clearFilterByCountry}>Clear</button>
-				<label>
-					Toggle color
-					<input type="checkbox" onClick={toggleMode} data-testid="toggle" />
-				</label>
-			</form>
-			<p></p>
-			<ul data-testid="list-of-players">
-				{searchResult.length > 0
-					? searchResult.map((player) => (
-							<li key={player.id}>
-								<p>{player.name}</p>
-								<button
-									className="hashtag"
-									onClick={() => filterByCountry(player.country)}
-								>
-									#{player.country.toLowerCase()}
-								</button>
-							</li>
-					  ))
-					: players.map((player) => (
-							<li key={player.id}>
-								<p>{player.name}</p>
-								<button
-									className="hashtag"
-									onClick={() => filterByCountry(player.country)}
-								>
-									#{player.country.toLowerCase()}
-								</button>
-							</li>
-					  ))}
-			</ul>
+			<Header
+				handleSearch={handleSearch}
+				handleChange={handleChange}
+				searchTerm={searchTerm}
+				clearFilterByCountry={clearFilterByCountry}
+				toggleMode={toggleMode}
+			/>
+			<ListWrapper
+				players={players}
+				searchResult={searchResult}
+				filterByCountry={filterByCountry}
+			/>
 		</div>
 	);
 };
