@@ -18,7 +18,7 @@ export default ({ player }) => {
                 width: 60px;
                 border: 0;
                 border-radius: 100%;
-                background: url('https://randomuser.me/api/portraits/med/women/${Math.floor(Math.random() * 100) + 1}.jpg') center center no-repeat;
+                background: url('https://randomuser.me/api/portraits/med/women/${player.id}.jpg') center center no-repeat;
                 background-size: cover;
                 display: block;
                 margin: 0 15px;

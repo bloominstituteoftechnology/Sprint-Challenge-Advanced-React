@@ -25,14 +25,22 @@ export default class CardList extends Component {
 
     render() {
         const { players } = this.state;
+        const { dark } = this.props;
         return (
             <div css={css`
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
+                
+                .card {
+                    background: ${dark ? "white" : "black"};
+                    p {
+                        color: ${dark ? "black" : "white"};
+                    }
+                }
             `}>
                 {
-                    players.map(p => <Card key={p.id} player={p} />)
+                    players.map(p => p.id < 100 ? (<Card key={p.id} player={p} />) : null)
                 }
             </div>
         )
