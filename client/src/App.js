@@ -1,33 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
+import Display from "./Display";
 
 class App extends React.Component {
   constructor() {
       super();
       this.state = {
-          users: [],
-          followers: []
+          players: []
       };
   };
 
-componentDidMount() {
-  axios.get("http://localhost:5000/api/players").then(response => {
-    this.setState({
-      players: response.data,
-    });
-  });
-}
+  componentDidMount() {
+    axios.get('http://localhost:5000/api/players')
+      .then((res) => {
+        console.log(res); this.setState({players: res.data})
+      })
+        .catch((err) => console.log(err))
+  }
 
 render() {
   return(
       <div>
         <h1>hello</h1>
+        <h2>{this.state.players.name}</h2>
+        <Display playersData={this.state.players} />
       </div>
-     
     );
   }
 };
-
 export default App;
