@@ -1,6 +1,6 @@
 import React from 'react';
 import Player from './components/Player';
-import withAPIHook from './hooks/Hook';
+import withAPIHook from './hooks/playerAPI';
 import './App.css';
 
 class App extends React.Component {

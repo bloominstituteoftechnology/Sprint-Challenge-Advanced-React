@@ -10,6 +10,6 @@ export default function playerAPI(url) {
 			})
 			.catch((error) => console.error(error))
 		return () => { };
-	}, [url])
+	}, [])
 	return data;
 }
