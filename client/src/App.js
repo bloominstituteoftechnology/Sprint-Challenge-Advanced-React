@@ -1,5 +1,5 @@
 import React from 'react';
-import { Player } from './components/Players';
+import Players from './components/Players';
 import NavBar from './components/NavBar';
 import logo from './logo.svg';
 import './App.css';
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <Player/>
+       <Players/>
     </div>
     // <div className="App">
     //   <header className="App-header">

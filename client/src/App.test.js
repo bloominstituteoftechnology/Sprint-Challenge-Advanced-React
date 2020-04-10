@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as rt1 from '@testing-library/react'
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import App from './App';
+import Players from './components/Players';
+import NavBar from './components/NavBar';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -10,47 +11,48 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-afterEach(rt1.cleanup);
+afterEach(cleanup);
 
 test('renders without crashing', () => {
-  rt1.render(<App />);
+  render(<App />);
 });
+
+test('Shows Title', () => {
+
+  const { getByText } = render(<NavBar/>);
+
+getByText(/Players/i);
+
+
+});
+
 
 test('Shows Name', () => {
-
-  const { getByText } = render(<App/>);
-
-  const testForName = getByText(/name/i);
-  expect (testForName).toBeInTheDocument();
-
+const p = document.createElement("p")
+ReactDOM.render(<Players/>, p)
+ReactDOM.unmountComponentAtNode(p)
 });
+//   expect (testForName).toBeInTheDocument();
 
-test('Shows Country', () => {
 
-  const { getByText } = render(<App/>);
 
-  const testForName = getByText(/country/i);
-  expect (testForName).toBeInTheDocument();
+// test('Shows Searches', () => {
 
-});
+//   const { getByText } = render(<App/>);
 
-test('Shows Searches', () => {
+//   const testForName = getByText(/searches/i);
+//   expect (testForName).toBeInTheDocument();
 
-  const { getByText } = render(<App/>);
+// });
 
-  const testForName = getByText(/searches/i);
-  expect (testForName).toBeInTheDocument();
+// test('Title displayed', () => {
+//   const { getByTestId } = rt1.render(<App />);
+//   getByTestId(/title/i)
+// })
 
-});
-
-test('Title displayed', () => {
-  const { getByTestId } = rt1.render(<App />);
-  getByTestId(/title/i)
-})
-
-test("displays toggle function", () => {
-  const { getByTestId } = rt1.render(<App />);
-  getByTestId("toggle");
-});
+// test("displays toggle function", () => {
+//   const { getByTestId } = rt1.render(<App />);
+//   getByTestId("toggle");
+// });
 
 
