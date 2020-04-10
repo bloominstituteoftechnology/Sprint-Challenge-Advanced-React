@@ -23,24 +23,38 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+
+      A class component requires more code but will also give you the benefit of using the lifecycle methods in React.
+
 - [ ] Name three lifecycle methods and their purposes.
+
+      Birth/Mounting: the render method is invoked
+      Growth/Updating: updating component data.
+      Death/UnMounting: component is removed from the screen.
+
 - [ ] What is the purpose of a custom hook?
+
+      Custom hooks are used to apply non-visual behavior and stateful logic throughout a component. They are reusable and can be created to watch for key presses, manage event listeners and handling controlled inputs.
+
 - [ ] Why is it important to test our apps?
+
+      Testing is essential for software quality.  It surfaces 	bugs quicker, acts as a safety-net when making 	changes, and gives the developers greater confidence in the code.
+
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `npm install` to download dependencies.
-- [ ] Run the server using `npm start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm start` to run the client application.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add TL as collaborator on Github.
+- [X] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [X] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [X] Run `npm install` to download dependencies.
+- [X] Run the server using `npm start` or `node server.js`.
+- [X] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [X] Still inside the `client` folder run `npm start` to run the client application.
+- [X] Implement the project on this Branch, **committing progress & changes often.**
+- [X] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
