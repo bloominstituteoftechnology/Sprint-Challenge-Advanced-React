@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Player } from './components/Players';
-import NavBar from './components/navBar';
+import NavBar from './components/NavBar';
 import logo from './logo.svg';
 import './App.css';
-import {useDarkMode} from './hooks/useDarkMode';
+// import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
   return (

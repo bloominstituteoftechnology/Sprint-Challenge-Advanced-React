@@ -1,23 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {render} from '@testing-library/react';
-import'@testing-library/jest-dom';
+import * as rt1 from '@testing-library/react'
+import { render } from '@testing-library/react';
 import App from './App';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
+});
 
-  test('App renders without crashing', () => {
-    render(<App/>);
-  });
+afterEach(rt1.cleanup);
 
-  test('Header appears', () => {
-    const {getByText} = render(<App/>);
+test('renders without crashing', () => {
+  rt1.render(<App />);
+});
 
-    const header = getByText(/Player searches/);
+test('Shows Name', () => {
 
-    expect(header).toBeInTheDocument()
-  })
+  const { getByText } = render(<App/>);
+
+  const testForName = getByText(/name/i);
+  expect (testForName).toBeInTheDocument();
+
+});
+
+test('Shows Country', () => {
+
+  const { getByText } = render(<App/>);
+
+  const testForName = getByText(/country/i);
+  expect (testForName).toBeInTheDocument();
+
+});
+
+test('Shows Searches', () => {
+
+  const { getByText } = render(<App/>);
+
+  const testForName = getByText(/searches/i);
+  expect (testForName).toBeInTheDocument();
+
+});
+
+test('Title displayed', () => {
+  const { getByTestId } = rt1.render(<App />);
+  getByTestId(/title/i)
+})
+
+test("displays toggle function", () => {
+  const { getByTestId } = rt1.render(<App />);
+  getByTestId("toggle");
+});
+
 
