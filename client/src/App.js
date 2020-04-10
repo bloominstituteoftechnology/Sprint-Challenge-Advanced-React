@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from "axios";
 import Display from "./Display";
+import Navbar from "./darkMode"
 
 class App extends React.Component {
   constructor() {
@@ -22,7 +23,6 @@ class App extends React.Component {
 render() {
   return(
       <div>
-        <h1>hello</h1>
         <h2>{this.state.players.name}</h2>
         <Display playersData={this.state.players} />
       </div>
