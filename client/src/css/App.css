@@ -1,0 +1,68 @@
+
+.App{
+  padding: 2rem 4rem;
+}
+
+.players-section{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: space-evenly;
+  height:500vh;
+}
+
+.player-info{
+  border: solid 1px;
+  border-radius: 5px;
+  width:18%;
+  height: 20vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:2rem;  
+}
+
+
+.dark-mode {
+  color: #fff;
+  background-color:black;
+}
+
+.button-dark{
+  background-color: #1E90FF;
+  color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.button-light{
+  background-color: #D3D3D3;
+  color:	#A9A9A9;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+button{
+  width:8rem;
+  line-height: 2;
+}
+
+
+
+
