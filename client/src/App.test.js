@@ -1,9 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { render, fireEvent, getByText, screen, getByTestId} from '@testing-library/react';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+test('navbar contents are visible',()=>{
+    const { getByTestId } = render(<App/>)
+    const navbar = getByTestId('navbar')
+    const darkbttn = getByTestId('darkbttn')
+    expect(navbar).toBeVisible();
+    expect(darkbttn).toBeVisible();
+})
+test('PlayerList is visible', ()=>{
+  const { getByText, getByTestId } = render(<App/>)
+  await wait(() => expect(queryByTestId('playerlist')).toBeTruthy())
+  
+})
