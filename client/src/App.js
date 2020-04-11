@@ -42,7 +42,7 @@ class App extends React.Component {
           <h2>Women's World Cup Players</h2>
           <h5>Ranked according to popularity</h5>
           <RainbowToggle/>
-          <div>
+          <div className='playerContainer'>
             {this.state.players.map((player) => {
               return <Player key = {player.id} id={player.id} name={player.name} country={player.country} searches={player.searches} />;
             })}
