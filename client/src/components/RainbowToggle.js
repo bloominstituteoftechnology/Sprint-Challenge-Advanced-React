@@ -13,7 +13,7 @@ const RainbowToggle = () => {
       <div className="toggle-div">
         <h1>Toggle Rainbow Background</h1>
         <div className="rainbow-mode__toggle">
-          <div onClick={toggleMode} className={rainbowMode ? 'toggle toggled' : 'toggle'} />
+          <div data-testid = "button" onClick={toggleMode} className={rainbowMode ? 'toggle toggled' : 'toggle'} />
         </div>
       </div>
     </nav>
