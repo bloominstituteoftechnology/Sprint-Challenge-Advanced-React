@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from "axios";
 import Display from "./Display";
-import Navbar from "./darkMode"
+
 
 class App extends React.Component {
   constructor() {
