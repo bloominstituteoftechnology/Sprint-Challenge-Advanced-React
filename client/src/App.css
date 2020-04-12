@@ -9,18 +9,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color: black;
 }
 
 @keyframes App-logo-spin {
@@ -30,4 +25,65 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* rainbow mode styles  */
+
+.rainbow-mode__toggle {
+  background: white;
+  border-radius: 50px;
+  border: 3px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: black;
+  border-radius: 50px;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 22px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+._rainbow-mode {
+  
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  animation: rainbow 18s ease infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+.toggle-div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerContainer{
+  display: flex;
+  flex-wrap:wrap;
+justify-content: space-between;
+margin:5%;
+  /* border: 5px dotted red; */
+}
+.player{
+  margin:2%;
 }
