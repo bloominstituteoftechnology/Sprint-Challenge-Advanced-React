@@ -7,3 +7,7 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+// const sum = (num1, num2) => {
+//   return num1 + num2
+// }
+// console.log(sum)
