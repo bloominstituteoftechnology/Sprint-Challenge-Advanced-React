@@ -5,7 +5,7 @@ import { Container } from "semantic-ui-react";
 
 //components
 import PlayerCard from "./components/PlayerCard";
-import Search from './components/SearchCountery';
+// import Search from './components/SearchCountery';
 import PlayerSearchForm from './components/PlayerSearchForm'
 //data
 import Axios from "axios";
@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <Container >
-        <Search countries={this.state} />
+        {/* <Search countries={this.state} /> */}
         <PlayerSearchForm players={this.state.players}/>
         <PlayerCard players={this.state} />
       </Container>

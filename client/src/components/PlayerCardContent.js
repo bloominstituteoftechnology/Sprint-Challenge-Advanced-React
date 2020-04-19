@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Card, Segment, Flag } from "semantic-ui-react";
 import useStyling from '../hooks/useStyling'
 

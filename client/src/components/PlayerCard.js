@@ -3,7 +3,6 @@ import { Container, Card, Dimmer, Loader, Segment } from "semantic-ui-react";
 import PlayerCardContent from './PlayerCardContent'
 
 const PlayerCard = ({players}) => {
-    console.log(players)
     return(
         <div>
             {

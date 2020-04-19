@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search, Grid, Header, Segment } from 'semantic-ui-react'
+import { Search} from 'semantic-ui-react'
 
 export default function SearchCountery(props) {
 
