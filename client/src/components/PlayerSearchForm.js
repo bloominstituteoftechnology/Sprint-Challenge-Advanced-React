@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "semantic-ui-react";
 
-function PlayerSearchForm({ players }) {
+function PlayerSearchForm({ players, countrySearch }) {
   const [selectedCountry, setSelectedCountry] = useState({
     country: "",
   });
@@ -31,10 +31,8 @@ function PlayerSearchForm({ players }) {
   //Update state on app to only show players from selected country form.
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(selectedCountry);
+    countrySearch(selectedCountry.country)
   };
-
-  //map through optoins in, creat a new Select Form, don't use Semantic UI see if that works.
 
   return (
     <Form style={{ margin: "50px 0 20px" }} onSubmit={submitHandler}>

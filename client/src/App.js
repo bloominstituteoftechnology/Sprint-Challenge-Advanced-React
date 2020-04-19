@@ -5,7 +5,7 @@ import { Container } from "semantic-ui-react";
 
 //components
 import PlayerCard from "./components/PlayerCard";
-// import Search from './components/SearchCountery';
+import FilteredSearchResultes from './components/FilteredSearchResults'
 import PlayerSearchForm from './components/PlayerSearchForm'
 //data
 import Axios from "axios";
@@ -15,7 +15,9 @@ class App extends React.Component {
     super();
     this.state = {
       isLoading:true,
-      players:[]
+      players:[],
+      countrySearch:"",
+      filteredSearch: false
     };
   }
 
@@ -32,12 +34,37 @@ class App extends React.Component {
       });
   }
 
+  componentDidUpdate(prevProps, prevState){
+    if (prevState.countrySearch !== this.state.countrySearch) {
+      this.setState(prevState => {
+        return {
+          ...prevState,
+          filteredSearch: true
+        }
+      })
+      console.log("App",this.state.countrySearch)
+    }
+  }
+
+  countrySearch = userEntry => {
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        countrySearch: userEntry
+      }
+    })
+  }
+
   render() {
     return (
       <Container >
         {/* <Search countries={this.state} /> */}
-        <PlayerSearchForm players={this.state.players}/>
-        <PlayerCard players={this.state} />
+        <PlayerSearchForm players={this.state.players} countrySearch={this.countrySearch}/>
+        {
+          this.state.filteredSearch === false
+          ? <PlayerCard players={this.state} />
+          : <FilteredSearchResultes players={this.state.players}/>
+        }
       </Container>
     );
   }
