@@ -1,39 +1,36 @@
-import React, { useState } from "react";
-import { Card, Segment, Flag } from "semantic-ui-react";
+import React, { useState, useEffect } from "react";
+import { Card, Segment, Flag, Loader, Dimmer } from "semantic-ui-react";
 import useStyling from "../hooks/useStyling";
 
 function FilteredSearchResults(props) {
   const [eventHandler, eventHander2] = useStyling();
   const [country, setCountry] = useState([]);
-  console.log("PROPS", props.country)
-  console.log("COUNTRY", typeof(country))
 
+  //create async function to wait for datay to update state
   const filteredByCountry = async () => {
     const currentCountry = await props.players;
     return currentCountry;
   };
-  
-  
+  //call async function
   filteredByCountry().then((res) => setCountry(res));
-  filteredByCountry().then((res) => console.log("ressres));
 
+//   useEffect(() => {
 
-//   const filteredByCountry2 = country.filter((country) => {
-//     return country.country === props.country
-//   });
-//   console.log("filler", filteredByCountry2)
+//     const filteredResults = props.players.filter((item) => {
+//       return item.country === props.country
+//     });
+//     console.log("filteredResults", filteredResults);
+//   }, [country]);
+
+  const filteredResults = props.players.filter((item) => {
+      return item.country === "United States"
+  })
+  console.log(filteredResults)
 
   return (
     <>
-      {/* {
-            props.players.filter(country => {
-                return (
-                    country.country === props.country
-                )
-            })
-        } */}
       <Card.Group itemsPerRow={6}>
-        {props.players.map((player) => {
+        {filteredResults.map((player) => {
           return (
             <Card key={player.id} style={{ textAlign: "center" }}>
               <Card.Content>

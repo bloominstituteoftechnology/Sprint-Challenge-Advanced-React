@@ -16,24 +16,25 @@ class App extends React.Component {
     this.state = {
       isLoading:true,
       players:[],
-      countrySearch:"",
-      filteredSearch: false
+      countrySearch:"Brazil",
+      filteredSearch: false,
+      filteredSearchValues: {},
     };
   }
-
+  
   componentDidMount() {
     Axios.get("http://localhost:5000/api/players")
-      .then(res => {
-        this.setState({
-          isLoading:false,
-          players:res.data
-        });
-      })
-      .catch(err => {
-        console.log(err);
+    .then(res => {
+      this.setState({
+        isLoading:false,
+        players:res.data
       });
+    })
+    .catch(err => {
+      console.log(err);
+    });
   }
-
+  
   componentDidUpdate(prevProps, prevState){
     if (prevState.countrySearch !== this.state.countrySearch) {
       this.setState(prevState => {
@@ -42,10 +43,9 @@ class App extends React.Component {
           filteredSearch: true
         }
       })
-      console.log("App",this.state.countrySearch)
     }
   }
-
+  
   countrySearch = userEntry => {
     this.setState((prevState) => {
       return {
@@ -54,8 +54,9 @@ class App extends React.Component {
       }
     })
   }
-
+  
   render() {
+
     return (
       <Container >
         {/* <Search countries={this.state} /> */}
