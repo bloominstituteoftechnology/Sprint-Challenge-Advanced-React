@@ -63,7 +63,7 @@ class App extends React.Component {
         {
           this.state.filteredSearch === false
           ? <PlayerCard players={this.state} />
-          : <FilteredSearchResultes players={this.state.players}/>
+          : <FilteredSearchResultes players={this.state.players} country={this.state.countrySearch}/>
         }
       </Container>
     );
