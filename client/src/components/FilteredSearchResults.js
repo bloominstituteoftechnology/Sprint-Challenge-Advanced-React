@@ -5,7 +5,7 @@ import useStyling from "../hooks/useStyling";
 function FilteredSearchResults(props) {
   const [eventHandler, eventHander2] = useStyling();
   const [country, setCountry] = useState([]);
-
+  console.log("State/Country", typeof(props.country), props.country)
   //create async function to wait for datay to update state
   const filteredByCountry = async () => {
     const currentCountry = await props.players;
@@ -15,19 +15,26 @@ function FilteredSearchResults(props) {
   filteredByCountry().then((res) => setCountry(res));
 
 //   useEffect(() => {
+    
+//     console.log("UseEffect")
 
 //     const filteredResults = props.players.filter((item) => {
+//         console.log("Filter", item.name)
 //       return item.country === props.country
 //     });
 //     console.log("filteredResults", filteredResults);
-//   }, [country]);
+//   }, [props.coutry]);
 
-  const filteredResults = props.players.filter((item) => {
-      return item.country === "United States"
-  })
-  console.log(filteredResults)
+const filteredResults = props.players.filter((item) => {
+    // console.log(item.country === item.country)
+    return item.country === props.country
+})
 
-  return (
+
+// console.log("filteredResults", filteredResults)
+// console.log("Props.Players", props.players)
+
+return (
     <>
       <Card.Group itemsPerRow={6}>
         {filteredResults.map((player) => {

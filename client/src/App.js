@@ -60,7 +60,7 @@ class App extends React.Component {
     return (
       <Container >
         {/* <Search countries={this.state} /> */}
-        <PlayerSearchForm players={this.state.players} countrySearch={this.countrySearch}/>
+        <PlayerSearchForm players={this.state.players} countrySearch={this.countrySearch} isLoading={this.state.isLoading}/>
         {
           this.state.filteredSearch === false
           ? <PlayerCard players={this.state} />
