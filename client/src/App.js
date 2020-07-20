@@ -27,7 +27,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
         <Players players={this.state.players}/>
         <button type="button" onClick={toggleTheme}>
         Switch theme
